@@ -1,0 +1,13 @@
+[
+  { "id": "todos", "label": "Todos", "icon": "📦" },
+  { "id": "requeijao", "label": "Requeijão Cremoso", "icon": "🧀" },
+  { "id": "mistura", "label": "Mistura Culinária", "icon": "🥣" },
+  { "id": "cheddar", "label": "Sabor Cheddar", "icon": "🧀" },
+  { "id": "conservas", "label": "Conservas", "icon": "🥫" },
+  { "id": "queijos", "label": "Queijos", "icon": "🧀" },
+  { "id": "diversos", "label": "Diversos", "icon": "🌿" },
+  { "id": "embutidos", "label": "Embutidos", "icon": "🥓" },
+  { "id": "bacons", "label": "Bacons", "icon": "🥩" },
+  { "id": "congelados", "label": "Congelados", "icon": "❄️" },
+  { "id": "chocolates/doces", "label": "Chocolates / Doces", "icon": "🍫" }
+]

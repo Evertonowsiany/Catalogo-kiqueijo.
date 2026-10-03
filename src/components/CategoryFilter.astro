@@ -1,0 +1,21 @@
+---
+import type { Category } from '../types';
+interface Props {
+  categories: Category[];
+}
+const { categories } = Astro.props;
+---
+
+<section class="categories-section" id="categorias">
+  <div class="categories-title">Filtrar por Categoria</div>
+  <div class="categories-grid">
+    {categories.map((cat, idx) => (
+      <button
+        class={`category-btn ${idx === 0 ? 'active' : ''}`}
+        data-category={cat.id}
+      >
+        <span class="cat-icon">{cat.icon}</span> {cat.label}
+      </button>
+    ))}
+  </div>
+</section>

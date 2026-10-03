@@ -1,0 +1,25 @@
+---
+import type { Product } from '../types';
+import ProductCard from './ProductCard.astro';
+
+interface Props {
+  products: Product[];
+}
+const { products } = Astro.props;
+---
+
+<section class="products-section" id="produtos">
+  <div class="products-count" id="productsCount">
+    <span>{products.length}</span> produtos encontrados
+  </div>
+  <div class="products-grid" id="productsGrid">
+    {products.map((p, i) => (
+      <ProductCard product={p} index={i} />
+    ))}
+    <div class="no-results" id="noResults" style="display: none;">
+      <div class="no-icon">🔎</div>
+      <h3>Nenhum produto encontrado</h3>
+      <p>Tente ajustar os filtros ou a busca para encontrar o que precisa.</p>
+    </div>
+  </div>
+</section>

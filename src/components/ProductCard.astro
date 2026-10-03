@@ -1,0 +1,52 @@
+---
+import type { Product } from '../types';
+interface Props {
+  product: Product;
+  index: number;
+}
+const { product: p, index: i } = Astro.props;
+const categories = Array.isArray(p.category) ? p.category : [p.category || ''];
+---
+
+<div
+  class="product-card"
+  data-id={p.id}
+  data-category={JSON.stringify(categories)}
+  data-name={p.name.toLowerCase()}
+  data-desc={p.desc.toLowerCase()}
+  data-tag={p.tag.toLowerCase()}
+  style={`animation-delay: ${Math.min(i, 20) * 0.05}s`}
+>
+  <div class="product-image-wrapper">
+    <img
+      src={p.image}
+      alt={p.name}
+      loading="lazy"
+      width="400"
+      height="300"
+    />
+    <span class={`product-tag ${p.tagClass}`}>{p.tag}</span>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">{p.name}</h3>
+    <p class="product-desc">{p.desc}</p>
+    <div class="product-price">
+      <span class="currency">R$</span> {p.price.toFixed(2).replace('.', ',')}
+      {p.unit && (
+        <span
+          class="product-unit"
+          style="font-size: 0.6em; font-weight: 500; color: #666; vertical-align: middle; margin-left: 4px;"
+        >
+          {p.unit}
+        </span>
+      )}
+    </div>
+    <button
+      class="product-btn"
+      id={`btn-product-${p.id}`}
+      data-product-id={p.id}
+    >
+      Mais informações
+    </button>
+  </div>
+</div>

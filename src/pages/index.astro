@@ -1,11 +1,33 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import CategoryFilter from '../components/CategoryFilter.astro';
+import ProductGrid from '../components/ProductGrid.astro';
+import ProductModal from '../components/ProductModal.astro';
+import Footer from '../components/Footer.astro';
+import type { Product, Category } from '../types';
+import productsData from '../data/products.json';
+import categoriesData from '../data/categories.json';
+import '../styles/catalog.css';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const products = productsData as Product[];
+const categories = categoriesData as Category[];
 ---
 
 <Layout>
-	<Welcome />
+  <Header categories={categories} />
+  <Hero />
+  <CategoryFilter categories={categories} />
+  <ProductGrid products={products} />
+  <ProductModal />
+  <Footer />
 </Layout>
+
+<script>
+  import { initCatalog } from '../scripts/catalog';
+  import productsData from '../data/products.json';
+  import type { Product } from '../types';
+
+  initCatalog(productsData as Product[]);
+</script>

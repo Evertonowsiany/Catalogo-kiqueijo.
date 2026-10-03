@@ -1,0 +1,3059 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Kiqueijo - Fornecimento de insumos de qualidade profissional para pizzarias, lanchonetes, restaurantes e panificadoras. Preço justo com entrega rápida.">
+    <title>Kiqueijo | Insumos Profissionais para food service</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <style>
+        /* ===== RESET & BASE ===== */
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --gold-50: #FFFBEB;
+            --gold-100: #FEF3C7;
+            --gold-200: #FDE68A;
+            --gold-300: #FCD34D;
+            --gold-400: #FBBF24;
+            --gold-500: #F59E0B;
+            --gold-600: #D97706;
+            --gold-700: #B45309;
+            --gold-800: #92400E;
+            --gold-900: #78350F;
+            --amber-gradient: linear-gradient(135deg, #F59E0B 0%, #D97706 40%, #B45309 100%);
+            --amber-gradient-light: linear-gradient(135deg, #FCD34D 0%, #FBBF24 50%, #F59E0B 100%);
+            --amber-gradient-hero: linear-gradient(160deg, #FBBF24 0%, #F59E0B 30%, #D97706 60%, #B45309 100%);
+            --white: #FFFFFF;
+            --gray-50: #F9FAFB;
+            --gray-100: #F3F4F6;
+            --gray-200: #E5E7EB;
+            --gray-300: #D1D5DB;
+            --gray-500: #6B7280;
+            --gray-600: #4B5563;
+            --gray-700: #374151;
+            --gray-800: #1F2937;
+            --gray-900: #111827;
+            --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.05);
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+            --radius: 12px;
+            --radius-sm: 8px;
+            --radius-full: 9999px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--gray-800);
+            background: var(--gray-50);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+
+        /* ===== HEADER & NAVBAR ===== */
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            width: 100%;
+            box-shadow: 0 4px 20px rgba(180, 83, 9, 0.25);
+        }
+
+        .navbar {
+            background: var(--amber-gradient-hero);
+            padding: 0 40px;
+            height: 59px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+        }
+
+        /* ===== ANNOUNCEMENT BAR ===== */
+        .announcement-bar {
+            width: 100%;
+            background: linear-gradient(90deg, #92400E 0%, #B45309 50%, #92400E 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 8px 16px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: #fff;
+            letter-spacing: 0.2px;
+            margin: 0;
+        }
+
+        .announcement-bar-dot {
+            width: 8px;
+            height: 8px;
+            background: #FCD34D;
+            border-radius: 50%;
+            flex-shrink: 0;
+            box-shadow: 0 0 0 0 rgba(252, 211, 77, 0.7);
+            animation: ping-dot 1.8s ease-in-out infinite;
+        }
+
+        @keyframes ping-dot {
+
+            0%,
+            100% {
+                box-shadow: 0 0 0 0 rgba(252, 211, 77, 0.7);
+            }
+
+            60% {
+                box-shadow: 0 0 0 6px rgba(252, 211, 77, 0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .announcement-bar {
+                font-size: 0.74rem;
+                padding: 6px 12px;
+            }
+        }
+
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+
+        .navbar-logo {
+            width: 42px;
+            height: 42px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            backdrop-filter: blur(10px);
+        }
+
+        .navbar-title {
+            color: var(--white);
+            font-size: 1.5rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
+
+        .navbar-subtitle {
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 0.65rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-top: -2px;
+        }
+
+        .navbar-links {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            list-style: none;
+        }
+
+        .navbar-links a {
+            color: var(--white);
+            text-decoration: none;
+            font-size: 0.875rem;
+            font-weight: 500;
+            padding: 8px 16px;
+            border-radius: var(--radius-sm);
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .navbar-links a:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .navbar-links a.active {
+            background: rgba(255, 255, 255, 0.25);
+            font-weight: 600;
+        }
+
+        /* Mobile menu */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 8px;
+        }
+
+        /* ===== HERO SECTION ===== */
+        .hero {
+            background: var(--amber-gradient-hero);
+            padding: 42px 40px 58px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -20%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.08) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            right: -10%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.06) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            color: var(--white);
+            font-size: 2.5rem;
+            font-weight: 800;
+            letter-spacing: -1px;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 10px rgba(120, 53, 15, 0.2);
+        }
+
+        .hero p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.05rem;
+            font-weight: 400;
+            line-height: 1.7;
+            max-width: 600px;
+            margin: 0 auto 26px;
+        }
+
+        /* Search Bar */
+        .search-container {
+            max-width: 580px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .search-container input {
+            width: 100%;
+            padding: 18px 24px 18px 54px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: var(--radius-full);
+            font-size: 1rem;
+            font-family: 'Inter', sans-serif;
+            background: rgba(255, 255, 255, 0.95);
+            color: var(--gray-800);
+            outline: none;
+            transition: var(--transition);
+            box-shadow: 0 8px 30px rgba(120, 53, 15, 0.15);
+        }
+
+        .search-container input::placeholder {
+            color: var(--gray-500);
+        }
+
+        .search-container input:focus {
+            border-color: var(--gold-300);
+            background: var(--white);
+            box-shadow: 0 8px 30px rgba(120, 53, 15, 0.25), 0 0 0 4px rgba(251, 191, 36, 0.2);
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--gray-500);
+            font-size: 1.1rem;
+        }
+
+        .search-hint {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 14px;
+            padding: 8px 18px;
+            background: rgba(0, 0, 0, 0.14);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border: 1px solid rgba(255, 255, 255, 0.28);
+            border-radius: var(--radius-full);
+            color: rgba(255, 255, 255, 0.95);
+            font-size: 0.85rem;
+            font-weight: 500;
+            line-height: 1.4;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            max-width: 100%;
+        }
+
+        .search-hint-icon {
+            font-size: 1rem;
+            flex-shrink: 0;
+        }
+
+        .search-hint strong {
+            color: #ffffff;
+            background: rgba(255, 255, 255, 0.22);
+            padding: 2px 8px;
+            border-radius: 6px;
+            font-weight: 700;
+            cursor: pointer;
+            text-decoration: underline;
+            text-underline-offset: 2px;
+            transition: var(--transition);
+        }
+
+        .search-hint strong:hover {
+            background: rgba(255, 255, 255, 0.38);
+        }
+
+        /* ===== WAVE DIVIDER ===== */
+        .wave-divider {
+            position: relative;
+            margin-top: -1px;
+        }
+
+        .wave-divider svg {
+            display: block;
+            width: 100%;
+            height: 50px;
+        }
+
+        /* ===== CATEGORIES SECTION ===== */
+        .categories-section {
+            padding: 50px 40px 10px;
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        .categories-title {
+            text-align: center;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--gray-700);
+            margin-bottom: 24px;
+        }
+
+        .categories-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        .category-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 24px;
+            border: 2px solid var(--gold-200);
+            background: var(--white);
+            border-radius: var(--radius-full);
+            font-family: 'Inter', sans-serif;
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: var(--gold-700);
+            cursor: pointer;
+            transition: var(--transition);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .category-btn:hover {
+            background: var(--gold-50);
+            border-color: var(--gold-400);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .category-btn.active {
+            background: var(--amber-gradient);
+            color: var(--white);
+            border-color: transparent;
+            box-shadow: 0 4px 14px rgba(245, 158, 11, 0.4);
+        }
+
+        .category-btn .cat-icon {
+            font-size: 1.15rem;
+        }
+
+
+
+        /* ===== PRODUCTS SECTION ===== */
+        .products-section {
+            padding: 30px 40px 80px;
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        .products-count {
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--gray-500);
+            margin-bottom: 32px;
+            font-weight: 500;
+        }
+
+        .products-count span {
+            font-weight: 700;
+            color: var(--gold-700);
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+
+        /* ===== PRODUCT CARD ===== */
+        .product-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            overflow: hidden;
+            border: 1px solid var(--gray-200);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+
+        .product-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-xl);
+            border-color: var(--gold-200);
+        }
+
+        .product-image-wrapper {
+            width: 100%;
+            height: 220px;
+            background: var(--gray-50);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product-image-wrapper::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 40px;
+            background: linear-gradient(to top, rgba(249, 250, 251, 0.8), transparent);
+        }
+
+        .product-image-wrapper img {
+            max-width: 85%;
+            max-height: 180px;
+            object-fit: contain;
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .product-card:hover .product-image-wrapper img {
+            transform: scale(1.08);
+        }
+
+        .product-tag {
+            position: absolute;
+            bottom: 12px;
+            left: 12px;
+            padding: 5px 12px;
+            border-radius: var(--radius-full);
+            font-size: 0.7rem;
+            font-weight: 600;
+            z-index: 2;
+            letter-spacing: 0.3px;
+        }
+
+        .tag-farinhas {
+            background: linear-gradient(135deg, #FEF3C7, #FDE68A);
+            color: var(--gold-800);
+        }
+
+        .tag-requeijao {
+            background: linear-gradient(135deg, #DBEAFE, #BFDBFE);
+            color: #1E3A8A;
+        }
+
+        .tag-cheddar {
+            background: linear-gradient(135deg, #FEF3C7, #FDE68A);
+            color: #92400E;
+        }
+
+        .tag-molhos {
+            background: linear-gradient(135deg, #FEE2E2, #FECACA);
+            color: #991B1B;
+        }
+
+        .tag-queijos {
+            background: linear-gradient(135deg, #FEF9C3, #FEF08A);
+            color: #854D0E;
+        }
+
+        .tag-embutidos {
+            background: linear-gradient(135deg, #FFE4E6, #FECDD3);
+            color: #9F1239;
+        }
+
+        .tag-embalagens {
+            background: linear-gradient(135deg, #E0E7FF, #C7D2FE);
+            color: #3730A3;
+        }
+
+        .tag-oleos {
+            background: linear-gradient(135deg, #D1FAE5, #A7F3D0);
+            color: #065F46;
+        }
+
+        .tag-conservas {
+            background: linear-gradient(135deg, #DBEAFE, #BFDBFE);
+            color: #1E40AF;
+        }
+
+        .tag-diversos {
+            background: linear-gradient(135deg, #FDE68A, #FCD34D);
+            color: #92400E;
+        }
+
+        .tag-congelados {
+            background: linear-gradient(135deg, #E0F2FE, #BAE6FD);
+            color: #0369A1;
+        }
+
+        .product-info {
+            padding: 20px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-name {
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--gray-900);
+            margin-bottom: 6px;
+            line-height: 1.3;
+        }
+
+        .product-desc {
+            font-size: 0.82rem;
+            color: var(--gray-500);
+            line-height: 1.5;
+            margin-bottom: 16px;
+            flex: 1;
+        }
+
+        .product-price {
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: var(--gold-700);
+            margin-bottom: 16px;
+            display: flex;
+            align-items: baseline;
+            gap: 4px;
+        }
+
+        .product-price .currency {
+            font-size: 0.85rem;
+            font-weight: 700;
+        }
+
+        .product-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 12px 24px;
+            background: var(--amber-gradient);
+            color: var(--white);
+            border: none;
+            border-radius: var(--radius-sm);
+            font-family: 'Inter', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            box-shadow: 0 4px 14px rgba(245, 158, 11, 0.3);
+        }
+
+        .product-btn:hover {
+            box-shadow: 0 6px 20px rgba(245, 158, 11, 0.5);
+            transform: translateY(-1px);
+        }
+
+        .product-btn:active {
+            transform: translateY(0);
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            background: var(--gray-900);
+            padding: 50px 40px 30px;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .footer-content {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand .footer-logo {
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: var(--gold-400);
+            margin-bottom: 12px;
+        }
+
+        .footer-brand p {
+            font-size: 0.85rem;
+            line-height: 1.7;
+            max-width: 320px;
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            font-size: 0.9rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: rgba(255, 255, 255, 0.6);
+            text-decoration: none;
+            font-size: 0.85rem;
+            transition: var(--transition);
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--gold-400);
+        }
+
+        .footer-bottom {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding-top: 24px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+            font-size: 0.8rem;
+        }
+
+        /* ===== ANIMATIONS ===== */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .product-card {
+            animation: fadeInUp 0.5s ease forwards;
+            opacity: 0;
+        }
+
+        .product-card:nth-child(1) {
+            animation-delay: 0.05s;
+        }
+
+        .product-card:nth-child(2) {
+            animation-delay: 0.1s;
+        }
+
+        .product-card:nth-child(3) {
+            animation-delay: 0.15s;
+        }
+
+        .product-card:nth-child(4) {
+            animation-delay: 0.2s;
+        }
+
+        .product-card:nth-child(5) {
+            animation-delay: 0.25s;
+        }
+
+        .product-card:nth-child(6) {
+            animation-delay: 0.3s;
+        }
+
+        .product-card:nth-child(7) {
+            animation-delay: 0.35s;
+        }
+
+        .product-card:nth-child(8) {
+            animation-delay: 0.4s;
+        }
+
+        /* ===== NO RESULTS ===== */
+        .no-results {
+            text-align: center;
+            padding: 60px 20px;
+            grid-column: 1 / -1;
+        }
+
+        .no-results .no-icon {
+            font-size: 3rem;
+            margin-bottom: 16px;
+        }
+
+        .no-results h3 {
+            font-size: 1.2rem;
+            color: var(--gray-700);
+            margin-bottom: 8px;
+        }
+
+        .no-results p {
+            color: var(--gray-500);
+            font-size: 0.9rem;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 1024px) {
+            .products-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 0 20px;
+            }
+
+            .navbar-links {
+                display: none;
+                position: absolute;
+                top: 59px;
+                left: 0;
+                right: 0;
+                background: var(--gold-700);
+                flex-direction: column;
+                padding: 16px;
+                box-shadow: var(--shadow-lg);
+                z-index: 1001;
+            }
+
+            .navbar-links.open {
+                display: flex;
+            }
+
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .hero {
+                padding: 29px 20px 42px;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero p {
+                font-size: 0.95rem;
+            }
+
+            .categories-section,
+            .products-section {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
+            .products-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 16px;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .products-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
+            }
+
+            .product-image-wrapper {
+                height: 140px;
+                padding: 12px;
+            }
+
+            .product-image-wrapper img {
+                max-height: 110px;
+            }
+
+            .product-info {
+                padding: 12px;
+            }
+
+            .product-name {
+                font-size: 0.82rem;
+                margin-bottom: 4px;
+            }
+
+            .product-desc {
+                font-size: 0.7rem;
+                margin-bottom: 10px;
+                line-height: 1.4;
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                line-clamp: 2;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+            }
+
+            .product-price {
+                font-size: 1.1rem;
+                margin-bottom: 10px;
+            }
+
+            .product-price .currency {
+                font-size: 0.75rem;
+            }
+
+            .product-btn {
+                padding: 9px 12px;
+                font-size: 0.75rem;
+                width: 100%;
+            }
+
+            .product-tag {
+                font-size: 0.6rem;
+                padding: 3px 8px;
+                bottom: 8px;
+                left: 8px;
+            }
+
+            .categories-grid {
+                gap: 8px;
+            }
+
+            .category-btn {
+                padding: 9px 14px;
+                font-size: 0.75rem;
+                gap: 5px;
+            }
+
+            .category-btn .cat-icon {
+                font-size: 1rem;
+            }
+
+
+
+            .hero h1 {
+                font-size: 1.5rem;
+            }
+
+            .hero p {
+                font-size: 0.85rem;
+            }
+
+            .search-container input {
+                padding: 14px 20px 14px 44px;
+                font-size: 0.9rem;
+            }
+
+            .search-hint {
+                font-size: 0.78rem;
+                padding: 7px 14px;
+                margin-top: 12px;
+                gap: 6px;
+            }
+
+            .navbar-title {
+                font-size: 1.2rem;
+            }
+
+            .navbar-subtitle {
+                font-size: 0.55rem;
+            }
+
+            .categories-section {
+                padding-top: 30px;
+            }
+
+            .products-section {
+                padding-bottom: 50px;
+            }
+        }
+
+        /* ===== MODAL ===== */
+        .modal-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(17, 24, 39, 0.7);
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(6px);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.35s ease, visibility 0.35s ease;
+        }
+
+        .modal-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal-box {
+            background: var(--white);
+            border-radius: 20px;
+            width: 100%;
+            max-width: 520px;
+            overflow: hidden;
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.3);
+            transform: translateY(40px) scale(0.95);
+            transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+            position: relative;
+        }
+
+        .modal-overlay.active .modal-box {
+            transform: translateY(0) scale(1);
+        }
+
+        .modal-img-area {
+            background: linear-gradient(160deg, #FEF3C7 0%, #FDE68A 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 220px;
+            padding: 24px;
+            position: relative;
+        }
+
+        .modal-img-area img {
+            max-height: 180px;
+            max-width: 100%;
+            object-fit: contain;
+            filter: drop-shadow(0 8px 20px rgba(120, 53, 15, 0.18));
+        }
+
+        .modal-tag {
+            position: absolute;
+            bottom: 14px;
+            left: 16px;
+            padding: 5px 14px;
+            border-radius: var(--radius-full);
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.4px;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 14px;
+            right: 16px;
+            background: rgba(255, 255, 255, 0.8);
+            border: none;
+            border-radius: 50%;
+            width: 36px;
+            height: 36px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+            color: var(--gray-700);
+            backdrop-filter: blur(4px);
+        }
+
+        .modal-close:hover {
+            background: var(--white);
+            transform: scale(1.1);
+            color: var(--gray-900);
+        }
+
+        .modal-body {
+            padding: 28px 28px 32px;
+        }
+
+        .modal-body h2 {
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: var(--gray-900);
+            line-height: 1.3;
+            margin-bottom: 10px;
+        }
+
+        .modal-body p {
+            font-size: 0.9rem;
+            color: var(--gray-500);
+            line-height: 1.65;
+            margin-bottom: 22px;
+        }
+
+        .modal-price-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: var(--gray-50);
+            border: 1px solid var(--gray-200);
+            border-radius: var(--radius);
+            padding: 16px 20px;
+            margin-bottom: 20px;
+        }
+
+        .modal-price-label {
+            font-size: 0.8rem;
+            color: var(--gray-500);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .modal-price-value {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: var(--gold-700);
+            display: flex;
+            align-items: baseline;
+            gap: 4px;
+        }
+
+        .modal-price-value .currency {
+            font-size: 0.9rem;
+            font-weight: 700;
+        }
+
+        .modal-price-value .unit {
+            font-size: 0.75rem;
+            font-weight: 500;
+            color: var(--gray-500);
+        }
+
+        .modal-whatsapp-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            width: 100%;
+            padding: 14px 24px;
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+            color: white;
+            border: none;
+            border-radius: var(--radius-sm);
+            font-family: 'Inter', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: var(--transition);
+            text-decoration: none;
+            box-shadow: 0 4px 16px rgba(37, 211, 102, 0.35);
+        }
+
+        .modal-whatsapp-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(37, 211, 102, 0.45);
+        }
+
+        @media (max-width: 480px) {
+            .modal-box {
+                border-radius: 16px;
+            }
+
+            .modal-img-area {
+                height: 180px;
+            }
+
+            .modal-body {
+                padding: 20px 20px 24px;
+            }
+
+            .modal-body h2 {
+                font-size: 1.1rem;
+            }
+        }
+
+        /* ===== WHATSAPP FLOATING BUTTON ===== */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            z-index: 9998;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+            color: #fff;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 700;
+            text-decoration: none;
+            padding: 14px 22px 14px 16px;
+            border-radius: 50px;
+            box-shadow: 0 6px 24px rgba(37, 211, 102, 0.45);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+            animation: waPulse 2.5s infinite;
+        }
+
+        .whatsapp-float:hover {
+            transform: translateY(-4px) scale(1.04);
+            box-shadow: 0 12px 32px rgba(37, 211, 102, 0.55);
+            animation: none;
+        }
+
+        .whatsapp-float svg {
+            flex-shrink: 0;
+            width: 26px;
+            height: 26px;
+        }
+
+        .whatsapp-float-text {
+            white-space: nowrap;
+            letter-spacing: 0.2px;
+        }
+
+        @keyframes waPulse {
+            0% {
+                box-shadow: 0 6px 24px rgba(37, 211, 102, 0.45);
+            }
+
+            50% {
+                box-shadow: 0 6px 36px rgba(37, 211, 102, 0.75);
+            }
+
+            100% {
+                box-shadow: 0 6px 24px rgba(37, 211, 102, 0.45);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .whatsapp-float {
+                bottom: 16px;
+                right: 16px;
+                padding: 12px 16px 12px 12px;
+                font-size: 0.82rem;
+            }
+
+            .whatsapp-float svg {
+                width: 22px;
+                height: 22px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ===== HEADER (NAVBAR + ANNOUNCEMENT) ===== -->
+    <header class="site-header">
+        <nav class="navbar" id="navbar">
+            <a href="#" class="navbar-brand">
+                <div class="navbar-logo">🧀</div>
+                <div>
+                    <div class="navbar-title">Kiqueijo</div>
+                    <div class="navbar-subtitle">Insumos para Food Service</div>
+                </div>
+            </a>
+
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Abrir menu">☰</button>
+            <ul class="navbar-links" id="navLinks">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#produtos">Produtos e Insumos</a></li>
+                <li><a href="#categorias">Categorias</a></li>
+                <li><a href="#footer">Contato</a></li>
+            </ul>
+        </nav>
+
+        <!-- ===== ANNOUNCEMENT BAR ===== -->
+        <div class="announcement-bar">
+            <span class="announcement-bar-dot"></span>
+            Pedidos feitos até 10h serão entregues no mesmo dia!
+        </div>
+    </header>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Produtos e Insumos</h1>
+            <div class="search-container">
+                <span class="search-icon">🔍</span>
+                <input type="text" id="searchInput" placeholder="Pesquisar insumo, categoria ou marca..."
+                    autocomplete="off">
+            </div>
+        </div>
+    </section>
+
+    <!-- Wave Divider -->
+    <div class="wave-divider">
+        <svg viewBox="0 0 1440 50" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+            <path
+                d="M0 0L60 4.2C120 8.3 240 16.7 360 22.2C480 27.8 600 30.6 720 27.8C840 25 960 16.7 1080 13.9C1200 11.1 1320 13.9 1380 15.3L1440 16.7V50H1380C1320 50 1200 50 1080 50C960 50 840 50 720 50C600 50 480 50 360 50C240 50 120 50 60 50H0V0Z"
+                fill="#F9FAFB" />
+        </svg>
+    </div>
+
+    <!-- ===== CATEGORIES ===== -->
+    <section class="categories-section" id="categorias">
+        <div class="categories-title">Filtrar por Categoria</div>
+        <div class="categories-grid">
+            <button class="category-btn active" data-category="todos" onclick="filterCategory(this)">
+                <span class="cat-icon">📦</span> Todos
+            </button>
+            <button class="category-btn" data-category="requeijao" onclick="filterCategory(this)">
+                <span class="cat-icon">🧀</span> Requeijão Cremoso
+            </button>
+            <button class="category-btn" data-category="mistura" onclick="filterCategory(this)">
+                <span class="cat-icon">🥣</span> Mistura Culinária
+            </button>
+            <button class="category-btn" data-category="cheddar" onclick="filterCategory(this)">
+                <span class="cat-icon">🧀</span> Sabor Cheddar
+            </button>
+            <button class="category-btn" data-category="conservas" onclick="filterCategory(this)">
+                <span class="cat-icon">🥫</span> Conservas
+            </button>
+            <button class="category-btn" data-category="queijos" onclick="filterCategory(this)">
+                <span class="cat-icon">🧀</span> Queijos
+            </button>
+            <button class="category-btn" data-category="diversos" onclick="filterCategory(this)">
+                <span class="cat-icon">🌿</span> Diversos
+            </button>
+            <button class="category-btn" data-category="embutidos" onclick="filterCategory(this)">
+                <span class="cat-icon">🥓</span> Embutidos
+            </button>
+            <button class="category-btn" data-category="bacons" onclick="filterCategory(this)">
+                <span class="cat-icon">🥩</span> Bacons
+            </button>
+            <button class="category-btn" data-category="congelados" onclick="filterCategory(this)">
+                <span class="cat-icon">❄️</span> Congelados
+            </button>
+            <button class="category-btn" data-category="chocolates/doces" onclick="filterCategory(this)">
+                <span class="cat-icon">🍫</span> Chocolates / Doces
+            </button>
+        </div>
+    </section>
+
+    <!-- ===== PRODUCTS ===== -->
+    <section class="products-section" id="produtos">
+        <div class="products-count" id="productsCount">
+            <span>5</span> produtos encontrados
+        </div>
+        <div class="products-grid" id="productsGrid">
+            <!-- Products will be injected by JS -->
+        </div>
+    </section>
+
+    <!-- ===== MODAL PRODUTO 1 ===== -->
+    <div class="modal-overlay" id="productModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+        <div class="modal-box" id="modalBox">
+            <div class="modal-img-area">
+                <img id="modalImg" src="" alt="" />
+                <span class="modal-tag tag-queijos" id="modalTag"></span>
+                <button class="modal-close" id="modalClose" aria-label="Fechar">✕</button>
+            </div>
+            <div class="modal-body">
+                <h2 id="modalTitle"></h2>
+                <p id="modalDesc"></p>
+                <div class="modal-price-row">
+                    <span class="modal-price-label">Preço</span>
+                    <div class="modal-price-value">
+                        <span class="currency">R$</span>
+                        <span id="modalPrice"></span>
+                        <span class="unit" id="modalUnit"></span>
+                    </div>
+                </div>
+                <a class="modal-whatsapp-btn" id="modalWhatsapp" href="#" target="_blank">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="white">
+                        <path
+                            d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                    </svg>
+                    Pedir pelo WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer" id="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="footer-logo">🧀 Kiqueijo</div>
+                <p>Fornecimento de insumos de qualidade profissional para pizzarias, lanchonetes,
+                    restaurantes e
+                    panificadoras. Entrega rápida e preço justo.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Categorias</h4>
+                <ul>
+                    <li><a href="#categorias">Requeijão Cremoso</a></li>
+                    <li><a href="#categorias">Mistura Culinária</a></li>
+                    <li><a href="#categorias">Sabor Cheddar</a></li>
+                    <li><a href="#categorias">Conservas</a></li>
+                    <li><a href="#categorias">Queijos</a></li>
+                    <li><a href="#categorias">Diversos</a></li>
+                    <li><a href="#categorias">Embutidos</a></li>
+                    <li><a href="#categorias">Congelados</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Institucional</h4>
+                <ul>
+                    <li><a href="#">Sobre Nós</a></li>
+                    <li><a href="#">Política de Entrega</a></li>
+                    <li><a href="#">Termos de Uso</a></li>
+                    <li><a href="#">Fale Conosco</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Kiqueijo. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        // ===== PRODUCTS DATA =====
+        const products = [
+            {
+                id: 1,
+                name: "Catupiri c/ Amido Alcremo 1,01kg",
+                desc: "Mistura de requeijão, queijo e amido culinário Alcremo Alimentos. Peso líquido 1,01kg. Ideal para rechear esfihas, coxinhas, pizzas e preparações que exigem requeijão cremoso de alta qualidade.",
+                price: 16.45,
+                unit: "un",
+                image: "images/catupiri_alcremo_1kg.jpg",
+                category: "requeijao",
+                tag: "Requeijão Cremoso",
+                tagClass: "tag-requeijao"
+            },
+            {
+                id: 2,
+                name: "Cheddar c/ Amido Alcremo 1,01kg",
+                desc: "Mistura de requeijão, queijo e amido com condimento sabor queijo tipo cheddar culinário Alcremo. Peso líquido 1,01kg. Perfeito para lanches, hambúrgueres e receitas com sabor cheddar.",
+                price: 17.65,
+                unit: "un",
+                image: "images/cheddar_alcremo_1kg.jpg",
+                category: "cheddar",
+                tag: "Cheddar",
+                tagClass: "tag-cheddar"
+            },
+            {
+                id: 3,
+                name: "Requeijão Cremoso Alcremo 1,01kg",
+                desc: "Requeijão cremoso tradicional Alcremo Alimentos em bisnaga de 1,01kg. Sem gordura vegetal, de Minas para você. Textura consistente e sabor autêntico, perfeito para pizzas, bordas, esfihas e culinária profissional.",
+                price: 27.99,
+                unit: "un",
+                image: "images/requeijao_cremoso_alcremo_1kg.png",
+                category: "requeijao",
+                tag: "Requeijão Cremoso",
+                tagClass: "tag-requeijao"
+            },
+            {
+                id: 4,
+                name: "Requeijão Cremoso Coronata 1,5kg",
+                desc: "Requeijão cremoso de alta qualidade em bisnaga de 1,5kg, ideal para recheios, bordas de pizza e esfihas.",
+                price: 45.99,
+                unit: "un",
+                image: "images/requeijao_coronata_1_5kg.jpg",
+                category: "requeijao",
+                tag: "Requeijão Cremoso",
+                tagClass: "tag-queijos"
+            },
+            {
+                id: 5,
+                name: "Catupiri c/ Amido Milk top 1,8kg",
+                desc: "Mistura especial sabor requeijão em bisnaga de 1,8kg com excelente rendimento e ótimo derretimento.",
+                price: 11.90,
+                unit: "un",
+                image: "images/milk_top_1_8kg.jpg",
+                category: "Mistura",
+                tag: "Mistura culinaria",
+                tagClass: "tag-queijos"
+            },
+            {
+                id: 6,
+                name: "Affamato Sabor Cheddar 1,2kg",
+                desc: "Mistura de requeijão e gordura vegetal sabor Cheddar em bisnaga de 1,2kg. Sabor intenso e cremosidade.",
+                price: 15.60,
+                unit: "un",
+                image: "images/affamato_cheddar_1_2kg.jpg",
+                category: "cheddar",
+                tag: "Mistura culinaria",
+                tagClass: "tag-diversos"
+            },
+            {
+                id: 7,
+                name: "Affamato Coronata Mistura de Requeijão 1,5kg",
+                desc: "Mistura culinária de requeijão, gordura vegetal e amido 1,5kg. Perfeita para uso profissional.",
+                price: 14.90,
+                unit: "un",
+                image: "images/affamato_coronata_1_5kg.jpg",
+                category: "mistura",
+                tag: "Mistura Culinária",
+                tagClass: "tag-farinhas"
+            },
+            {
+                id: 8,
+                name: "Lacto Alegre Requeijão 1,8kg",
+                desc: "Requeijão cremoso tradicional Lacto Alegre em bisnaga de 1,8kg. Textura consistente e sabor inconfundível.",
+                price: 39.90,
+                unit: "un",
+                image: "images/lacto_alegre_1_8kg.jpg",
+                category: "requeijao",
+                tag: "Requeijão Cremoso",
+                tagClass: "tag-queijos"
+            },
+            {
+                id: 9,
+                name: "Cream Cheese Philadelphia 1,5kg",
+                desc: "Cream Cheese Original Philadelphia em formato de bisnaga de 1,5kg, ideal para toques de leveza.",
+                price: 76.50,
+                unit: "un",
+                image: "images/philadelphia_1_5kg.jpg",
+                category: "requeijao",
+                tag: "Cream Cheese",
+                tagClass: "tag-queijos"
+            },
+            {
+                id: 10,
+                name: "Cream Cheese CoroCheese 1,2kg",
+                desc: "Cream Cheese CoroCheese em bisnaga de 1,2kg. Qualidade e cremosidade da indústria brasileira.",
+                price: 34.90,
+                unit: "un",
+                image: "images/corocheese_1_2kg.jpg",
+                category: "requeijao",
+                tag: "Cream Cheese",
+                tagClass: "tag-queijos"
+            },
+            {
+                id: 11,
+                name: "CoroCheddar Mistura 1,8kg",
+                desc: "Mistura de requeijão com queijo tipo cheddar e gordura vegetal em bisnaga de 1,8kg.",
+                price: 27.40,
+                unit: "un",
+                image: "images/corocheddar_mistura_1_8kg.jpg",
+                category: "cheddar",
+                tag: "Mistura culinaria",
+                tagClass: "tag-diversos"
+            },
+            {
+                id: 12,
+                name: "CoroCheddar Requeijão Cremoso 1,5kg",
+                desc: "Requeijão cremoso com queijo tipo cheddar em bisnaga de 1,5kg, perfeito para hambúrgueres.",
+                price: 45.70,
+                unit: "un",
+                image: "images/corocheddar_cremoso_1_5kg.jpg",
+                category: "cheddar",
+                tag: "Sabor Cheddar",
+                tagClass: "tag-diversos"
+            },
+            {
+                id: 13,
+                name: "Vale do Pardo Mistura Culinária 1,8kg",
+                desc: "Pasta à base de requeijão e gordura vegetal em bisnaga de 1,8kg. Especial para pizzas, esfihas e recheios com excelente cremosidade.",
+                price: 11.90,
+                unit: "un",
+                image: "images/vale_do_pardo_1_8kg.jpg",
+                category: "mistura",
+                tag: "Mistura Culinária",
+                tagClass: "tag-farinhas"
+            },
+            {
+                id: 14,
+                name: "Requeijão Cremoso Della Vita 1,5kg",
+                desc: "Requeijão cremoso com queijo Della Vita em bisnaga de 1,5kg. Sabor autêntico e consistência ideal para pizzas, recheios e culinária profissional.",
+                price: 43.20,
+                unit: "un",
+                image: "images/della_vita_1_5kg.jpg",
+                category: "requeijao",
+                tag: "Requeijão Cremoso",
+                tagClass: "tag-queijos"
+            },
+            {
+                id: 15,
+                name: "Milho Verde Quero Lata 3,1kg",
+                desc: "Milho verde em conserva Quero em lata de 3,1kg (peso drenado 1,7kg). Pronto para servir e ideal para pizzas, lanches e saladas.",
+                price: 19.99,
+                unit: "un",
+                image: "images/quero_milho_verde.jpeg",
+                category: "conservas",
+                tag: "Conservas",
+                tagClass: "tag-conservas"
+            },
+            {
+                id: 16,
+                name: "Molho de Tomate Pizza Predilecta Bag 3,1kg",
+                desc: "Molho de tomate especial para pizza Predilecta em embalagem bag de 3,1kg. Pronto para uso, com excelente rendimento e sabor marcante.",
+                price: 15.35,
+                unit: "un",
+                image: "images/predilecta_molho_tomate_3_1kg.png",
+                category: "conservas",
+                tag: "Molho de Tomate",
+                tagClass: "tag-molhos"
+            },
+            {
+                id: 17,
+                name: "Molho de Tomate Pizza D'ajuda 2kg",
+                desc: "Molho de tomate com orégano e cebola D'ajuda em embalagem bag de 2kg. Pronto para usar em pizzas, excelente rendimento e sabor marcante.",
+                price: 13.60,
+                unit: "un",
+                image: "images/dajuda_molho_tomate_2kg.png",
+                category: "conservas",
+                tag: "Molho de Tomate",
+                tagClass: "tag-molhos"
+            },
+            {
+                id: 18,
+                name: "Azeitona Verde Fatiada Vale Fértil Balde",
+                desc: "Azeitonas verdes fatiadas Vale Fértil em balde. Selecionadas e conservadas com alto padrão de qualidade, ideais para pizzas, empadões e salgados.",
+                price: 47.85,
+                unit: "un",
+                image: "images/azeitona_verde_fatiada_vale_fertil.png",
+                category: "conservas",
+                tag: "Azeitona",
+                tagClass: "tag-conservas"
+            },
+            {
+                id: 19,
+                name: "Azeitona Preta Fatiada Vale Fértil Balde",
+                desc: "Azeitonas pretas fatiadas Vale Fértil em balde. Sabor suave e marcante, perfeita para pizzas especiais, porções, saladas e culinária profissional.",
+                price: 69.60,
+                unit: "un",
+                image: "images/azeitona_preta_fatiada_vale_fertil.png",
+                category: "conservas",
+                tag: "Azeitona",
+                tagClass: "tag-conservas"
+            },
+            {
+                id: 20,
+                name: "Azeitona Verde Inteira Vale Fértil Balde",
+                desc: "Azeitonas verdes inteiras Vale Fértil em balde. Frutos firmes e saborosos, excelentes para petiscos, porções, bar e restaurantes.",
+                price: 47.85,
+                unit: "un",
+                image: "images/azeitona_verde_inteira_vale_fertil.png",
+                category: "conservas",
+                tag: "Azeitona",
+                tagClass: "tag-conservas"
+            },
+            {
+                id: 21,
+                name: "Azeitona Verde s/Caroço Margherita Balde 3kg",
+                desc: "Azeitonas verdes sem caroço Margherita em balde de 3kg (peso drenado 1,8kg). Zero gordura trans, zero lactose, zero glúten. Qualidade premium para pizzas, massas, saladas e culinária profissional.",
+                price: 48.70,
+                unit: "un",
+                image: "images/azeitona_s_caroco_margherita_balde.jpg",
+                category: "conservas",
+                tag: "Azeitona",
+                tagClass: "tag-conservas"
+            },
+            {
+                id: 22,
+                name: "Azeitona Verde Fatiada Margherita Balde 3kg",
+                desc: "Azeitonas verdes fatiadas Margherita em balde de 3kg (peso drenado 1,8kg). Zero gordura trans, zero lactose, zero glúten. Praticidade e sabor marcante para pizzas, esfihas, recheios e culinária profissional.",
+                price: 47.20,
+                unit: "un",
+                image: "images/azeitona_fatiada_margherita_balde.jpg",
+                category: "conservas",
+                tag: "Azeitona",
+                tagClass: "tag-conservas"
+            },
+            {
+                id: 23,
+                name: "Azeitona Verde Rainha Balde 3kg",
+                desc: "Azeitonas verdes em conserva Rainha das Azeitonas em balde de 3kg (peso drenado 2kg). Frutos selecionados de excelente qualidade e sabor equilibrado, perfeitas para pizzas, lanches, saladas e porções.",
+                price: 28.50,
+                unit: "un",
+                image: "images/azeitona_rainha_3kg.jpg",
+                category: "conservas",
+                tag: "Azeitona",
+                tagClass: "tag-conservas"
+            },
+            {
+                id: 24,
+                name: "Queijo Mussarela Queijos da Lelê Peça",
+                desc: "Queijo mussarela tradicional Queijos da Lelê. Excelente derretimento e sabor suave, ideal para pizzas, sanduíches e salgados.",
+                price: 33.40,
+                unit: "kg",
+                image: "images/queijos_da_lele_mussarela.jpeg",
+                category: "queijos",
+                tag: "Mussarela",
+                tagClass: "tag-queijos"
+            },
+            {
+                id: 25,
+                name: "Queijo Mussarela Latelli Peça",
+                desc: "Queijo mussarela Latelli em peça. Sabor pronunciado e derretimento perfeito para pizzas de alto padrão e receitas culinárias.",
+                price: 34.90,
+                unit: "kg",
+                image: "images/latelli_mussarela.jpeg",
+                category: "queijos",
+                tag: "Mussarela",
+                tagClass: "tag-queijos"
+            },
+            {
+                id: 26,
+                name: "Queijo Mussarela Laticínios Mangoni Peça",
+                desc: "Queijo mussarela Mangoni em peça. Altíssimo padrão de qualidade, ideal para fatiar, ralar e derreter em pizzas e receitas especiais.",
+                price: 31.90,
+                unit: "kg",
+                image: "images/mangoni_mussarela.jpeg",
+                category: "queijos",
+                tag: "Mussarela",
+                tagClass: "tag-queijos"
+            },
+            {
+                id: 27,
+                name: "Queijo Mussarela Friopac Peça",
+                desc: "Queijo mussarela Friopac em peça. Excelente textura, sabor marcante e ótimo derretimento para pizzas, lanches e culinária em geral.",
+                price: 31.90,
+                unit: "kg",
+                image: "images/friopac_mussarela.png",
+                category: "queijos",
+                tag: "Mussarela",
+                tagClass: "tag-queijos"
+            },
+            {
+                id: 28,
+                name: "Queijo Mussarela Extralat peça",
+                desc: "Queijo mussarela Extralat em barra de 4kg. Alta qualidade, derretimento uniforme e sabor suave, ideal para pizzas, lanches e culinária profissional em grande escala.",
+                price: 31.90,
+                unit: "kg",
+                image: "images/extralat_mussarela_4kg.png",
+                category: "queijos",
+                tag: "Mussarela",
+                tagClass: "tag-queijos"
+            },
+            {
+                id: 29,
+                name: "Oregano 1kg",
+                desc: "Orégano desidratado em flocos embalagem de 1kg. Aroma intenso, cor vibrante e sabor marcante, essencial para pizzas, molhos de tomate, massas, carnes e temperos em geral.",
+                price: 27.99,
+                unit: "kg",
+                image: "images/oregano_luzago_1kg.jpg",
+                category: "diversos",
+                tag: "Orégano",
+                tagClass: "tag-diversos"
+            },
+            {
+                id: 30,
+                name: "Alho Triturado ArcoBello 1kg",
+                desc: "Alho triturado ArcoBello em pote de 1kg. Praticidade e sabor intenso para temperar e dar um toque especial nas suas receitas.",
+                price: 14.99,
+                unit: "un",
+                image: "images/alho_triturado_1kg.png",
+                category: "diversos",
+                tag: "Alho",
+                tagClass: "tag-diversos"
+            },
+            {
+                id: 31,
+                name: "Alho Triturado Toscana Balde 3kg",
+                desc: "Alho triturado sem sal Toscana em balde de 3kg. Praticidade e rendimento para pizzarias, restaurantes e food service de alto volume.",
+                price: 39.90,
+                unit: "un",
+                image: "images/toscana_alho_triturado_3kg.png",
+                category: "diversos",
+                tag: "Alho",
+                tagClass: "tag-diversos"
+            },
+            {
+                id: 32,
+                name: "Coloral 1kg",
+                desc: "Colorau em pó de 1kg. Corante natural à base de urucum, essencial para dar cor e sabor marcante a carnes, frango, arroz e receitas culinárias.",
+                price: 12.90,
+                unit: "un",
+                image: "images/coloral_1kg.png",
+                category: "diversos",
+                tag: "Diversos",
+                tagClass: "tag-diversos"
+            },
+            {
+                id: 33,
+                name: "Linguiça Calabresa Frimesa 3kg",
+                desc: "Linguiça tipo calabresa cozida e defumada Frimesa. Especial para fatiar, perfeita para pizzas e lanches. Pacote de 3kg.",
+                price: 22.49,
+                unit: "kg",
+                image: "images/calabresa_frimesa_3kg.png",
+                category: "embutidos",
+                tag: "Calabresa",
+                tagClass: "tag-embutidos"
+            },
+            {
+                id: 34,
+                name: "Linguiça Calabresa Friella Inteira",
+                desc: "Linguiça tipo calabresa cozida e defumada Friella. Excelente qualidade e sabor, ideal para pizzas, porções e lanches.",
+                price: 18.50,
+                unit: "kg",
+                image: "images/calabresa_friella.png",
+                category: "embutidos",
+                tag: "Calabresa",
+                tagClass: "tag-embutidos"
+            },
+            {
+                id: 35,
+                name: "Mostarda Sachê D'ajuda Cx 192un",
+                desc: "Caixa com 192 sachês de mostarda amarela D'ajuda de 7g cada. Praticidade e sabor para lanchonetes, pizzarias e food service.",
+                price: 15.59,
+                unit: "cx",
+                image: "images/mostarda_sache_dajuda.png",
+                category: "diversos",
+                tag: "Mostarda",
+                tagClass: "tag-diversos"
+            },
+            {
+                id: 36,
+                name: "Molho Barbecue Sachê D'ajuda Cx 192un",
+                desc: "Caixa com 192 sachês de molho barbecue D'ajuda de 7g cada. Sabor defumado e marcante, ideal para lanchonetes, hamburguerias e food service.",
+                price: 23.50,
+                unit: "cx",
+                image: "images/barbecue_sache_dajuda.png",
+                category: "diversos",
+                tag: "Barbecue",
+                tagClass: "tag-diversos"
+            },
+            {
+                id: 37,
+                name: "Maionese Sachê D'ajuda Cx 192un",
+                desc: "Caixa com 192 sachês de maionese tradicional D'ajuda de 7g cada. Praticidade, higiene e cremosidade para lanchonetes, pizzarias e deliverys.",
+                price: 16.50,
+                unit: "cx",
+                image: "images/maionese_sache_dajuda.png",
+                category: "diversos",
+                tag: "Maionese",
+                tagClass: "tag-diversos"
+            },
+            {
+                id: 38,
+                name: "Molho Verde Sachê D'ajuda Cx 192un",
+                desc: "Caixa com 192 sachês de molho verde com ervas D'ajuda de 7g cada. Sabor especial e praticidade para porções, hambúrgueres e petiscos.",
+                price: 29.40,
+                unit: "cx",
+                image: "images/molho_verde_sache_dajuda.png",
+                category: "diversos",
+                tag: "Molho Verde",
+                tagClass: "tag-diversos"
+            },
+            {
+                id: 39,
+                name: "American Burger Bisnaga D'ajuda 1,01kg",
+                desc: "Molho cremoso sabor American Burger D'ajuda em bisnaga de 1,01kg. Perfeito para hambúrgueres, hot dogs e lanches em geral.",
+                price: 19.99,
+                unit: "un",
+                image: "images/american_burger_bisnaga_dajuda.png",
+                category: "diversos",
+                tag: "Molho",
+                tagClass: "tag-diversos"
+            },
+            {
+                id: 40,
+                name: "Molho Barbecue D'ajuda Galão 3,6kg",
+                desc: "Molho barbecue D'ajuda em galão de 3,6kg. Sabor defumado e encorpado, perfeito para porções, hambúrgueres, carnes e uso profissional em escala.",
+                price: 24.60,
+                unit: "un",
+                image: "images/barbecue_galao_dajuda_3_6kg.png",
+                category: "diversos",
+                tag: "Molho",
+                tagClass: "tag-diversos"
+            },
+            {
+                id: 41,
+                name: "Shoyu Tradicional Mitsuwa Galão 3,1L",
+                desc: "Molho de soja tradicional Mitsuwa em galão de 3,1L. Fermentação natural, sabor autêntico e rendimento superior para pratos asiáticos e marinandas.",
+                price: 27.60,
+                unit: "un",
+                image: "images/mitsuwa_shoyu_3_1l.png",
+                category: "diversos",
+                tag: "Shoyu",
+                tagClass: "tag-diversos"
+            },
+            {
+                id: 42,
+                name: "Mostarda Amarela D'ajuda Galão 3,2kg",
+                desc: "Molho de mostarda amarela D'ajuda em galão de 3,2kg. Textura cremosa e sabor marcante, ideal para lanchonetes, pastelarias e culinária em geral.",
+                price: 22.40,
+                unit: "un",
+                image: "images/mostarda_galao_dajuda_3_2kg.png",
+                category: "diversos",
+                tag: "Mostarda",
+                tagClass: "tag-diversos"
+            },
+            {
+                id: 43,
+                name: "Catchup Tradicional D'ajuda Galão 3,5kg",
+                desc: "Catchup tradicional D'ajuda em galão de 3,5kg. Preparado com tomates selecionados, sabor equilibrado e ideal para lanches, porções e pizzas.",
+                price: 26.99,
+                unit: "un",
+                image: "images/catchup_galao_dajuda_3_5kg.png",
+                category: "diversos",
+                tag: "Catchup",
+                tagClass: "tag-diversos"
+            },
+            {
+                id: 44,
+                name: "Molho Cremoso Sabor Catchup Calcutá Galão 3,4kg",
+                desc: "Molho cremoso sabor catchup Calcutá em galão de 3,4kg. Excelente rendimento e sabor agradável, perfeito para hamburguerias, lanchonetes e porções.",
+                price: 19.99,
+                unit: "un",
+                image: "images/catchup_galao_calcuta_3_4kg.png",
+                category: "diversos",
+                tag: "Catchup",
+                tagClass: "tag-diversos"
+            },
+            {
+                id: 45,
+                name: "Mostarda Calcutá Galão 3,2kg",
+                desc: "Condimento preparado à base de mostarda Calcutá em galão de 3,2kg. Sabor característico e ótimo custo-benefício para lanches e estabelecimentos alimentícios.",
+                price: 19.90,
+                unit: "un",
+                image: "images/mostarda_galao_calcuta_3_2kg.png",
+                category: "diversos",
+                tag: "Mostarda",
+                tagClass: "tag-diversos"
+            },
+            {
+                id: 46,
+                name: "Óleo de Soja cocamar Pet 900ml",
+                desc: "Óleo de soja Cocamar 100% puro em garrafa PET de 900ml.",
+                price: 8.89,
+                unit: "un",
+                image: "images/oleo_soja_cocamar.png",
+                category: "outros",
+                tag: "Óleo",
+                tagClass: "tag-conservas"
+            },
+            {
+                id: 47,
+                name: "Doritos Sabor Queijo Nacho",
+                desc: "Tortilha de milho sabor queijo nacho Doritos. Ideal para porções especiais, pizzas mexicanas, lanches e petiscos.",
+                price: 17.99,
+                unit: "un",
+                image: "images/doritos_queijo_nacho.png",
+                category: "outros",
+                tag: "Salgadinho",
+                tagClass: "tag-farinhas"
+            },
+            {
+                id: 48,
+                name: "Creme Culinário Master Martini 1L",
+                desc: "Creme culinário UHT Master Martini Cuisine em embalagem de 1L. Não talha ao ferver, textura cremosa para receitas doces e salgadas.",
+                price: 11.90,
+                unit: "un",
+                image: "images/creme_culinario_master_martini_1l.png",
+                category: "diversos",
+                tag: "Creme Culinário",
+                tagClass: "tag-farinhas"
+            },
+            {
+                id: 49,
+                name: "Recheio Sabor Creme Leitinho Doceiro 1,005kg",
+                desc: "Recheio sabor creme leitinho Haenssgen Doceiro em manga de 1,005kg. Pronto para uso em pizzas doces, bolos, tortas e sobremesas.",
+                price: 24.90,
+                unit: "un",
+                image: "images/recheio_creme_leitinho_doceiro_1kg.png",
+                category: "chocolates/doces",
+                tag: "Recheio Doce",
+                tagClass: "tag-farinhas"
+            },
+            {
+                id: 50,
+                name: "Recheio Forneável Sabor Doce de Leite Bom Princípio 1,01kg",
+                desc: "Recheio forneável sabor doce de leite Bom Princípio em manga de 1,01kg. Resistente a altas temperaturas, perfeito para pizzas, pastéis e doces.",
+                price: 23.90,
+                unit: "un",
+                image: "images/recheio_doce_de_leite_bom_principio_1kg.png",
+                category: "chocolates/doces",
+                tag: "Recheio Forneável",
+                tagClass: "tag-farinhas"
+            },
+            {
+                id: 51,
+                name: "Recheio Forneável Sabor Chocolate ao Leite Doceiro 1,005kg",
+                desc: "Recheio forneável sabor chocolate ao leite Haenssgen Doceiro em manga de 1,005kg. Resiste até 200°C, ideal para pizzas doces, pastéis e bolos.",
+                price: 25.90,
+                unit: "un",
+                image: "images/recheio_chocolate_ao_leite_doceiro_1kg.png",
+                category: "chocolates/doces",
+                tag: "Recheio Forneável",
+                tagClass: "tag-farinhas"
+            },
+            {
+                id: 52,
+                name: "Recheio Forneável Sabor Chocolate Branco Doceiro 1,005kg",
+                desc: "Recheio forneável sabor chocolate branco Haenssgen Doceiro em manga de 1,005kg. Resiste até 200°C, perfeito para pizzas doces, tortas e sobremesas.",
+                price: 24.60,
+                unit: "un",
+                image: "images/recheio_chocolate_branco_doceiro_1kg.png",
+                category: "chocolates/doces",
+                tag: "Recheio Forneável",
+                tagClass: "tag-farinhas"
+            },
+            {
+                id: 53,
+                name: "Recheio Forneável Sabor Creme de Avelã com Cacau Doceiro 1,005kg",
+                desc: "Recheio forneável sabor creme de avelã com cacau Haenssgen Doceiro em manga de 1,005kg. Resiste até 200°C, perfeito para pizzas doces, croissants e confeitaria.",
+                price: 27.90,
+                unit: "un",
+                image: "images/recheio_creme_avela_cacau_doceiro_1kg.png",
+                category: "chocolates/doces",
+                tag: "Recheio Forneável",
+                tagClass: "tag-farinhas"
+            },
+            {
+                id: 54,
+                name: "Abacaxi em Calda Rodelas Citrocal 400g",
+                desc: "Abacaxi em calda em rodelas Citrocal (peso drenado 400g / peso líquido 820g). Frutas selecionadas, ideais para pizzas doces, tortas, sobremesas e confeitaria.",
+                price: 15.50,
+                unit: "un",
+                image: "images/abacaxi_em_caldas_citrocal_400g.png",
+                category: "conservas",
+                tag: "Conservas",
+                tagClass: "tag-conservas"
+            },
+            {
+                id: 55,
+                name: "Açúcar Refinado Especial Caravelas 5kg",
+                desc: "Açúcar refinado especial Caravelas em pacote de 5kg. Alta pureza e dissolução rápida, perfeito para massas, caldas, recheios e confeitaria profissional.",
+                price: 17.99,
+                unit: "un",
+                image: "images/acucar_caravelas_5kg.png",
+                category: "diversos",
+                tag: "Açúcar",
+                tagClass: "tag-diversos"
+            },
+            {
+                id: 56,
+                name: "Alho Frito Luzago 1kg",
+                desc: "Alho frito crocante e dourado Luzago em pacote de 1kg. Pronto para uso, traz aroma e sabor marcante para pizzas, porções, lanches e culinária em geral.",
+                price: 32.80,
+                unit: "un",
+                image: "images/alho_frito_luzago_1kg.jpg",
+                category: "diversos",
+                tag: "Alho",
+                tagClass: "tag-diversos"
+            },
+            {
+                id: 57,
+                name: "Aliche em Óleo 900g",
+                desc: "Filés de aliche em conserva de 900g. Sabor intenso e salgado característico, perfeito para pizzas especiais, molhos e culinária gourmet.",
+                price: 58.90,
+                unit: "un",
+                image: "images/aliche_900g.jpg",
+                category: "conservas",
+                tag: "Aliche",
+                tagClass: "tag-conservas"
+            },
+            {
+                id: 58,
+                name: "Aliche em Óleo Médio 450g",
+                desc: "Filé de sardinha anchovada em óleo comestível Serra do Mar. Pote de vidro 540g (peso drenado 450g). Sabor intenso e característico, ideal para pizzas, molhos, antepastos e culinária gourmet.",
+                price: 34.99,
+                unit: "un",
+                image: "images/aliche_medio_450g.jpg",
+                category: "conservas",
+                tag: "Aliche",
+                tagClass: "tag-conservas"
+            },
+            {
+                id: 59,
+                name: "Amaciante de Carnes Tecnutri 1,01kg",
+                desc: "Amaciante de carnes com condimentos especiais Tecnutri Food Service. Proporciona máxima maciez e suculência, realçando o sabor de cortes bovinos, suínos e aves. Nova fórmula, 1,01kg.",
+                price: 15.49,
+                unit: "un",
+                image: "images/amaciante_de_carne_1kg.jpg",
+                category: "diversos",
+                tag: "Diversos",
+                tagClass: "tag-diversos"
+            },
+            {
+                id: 60,
+                name: "Amendoim Torrado Granulado Flatut 1kg",
+                desc: "Amendoim torrado granulado Flatut Alimentos em pacote de 1,001kg. Crocante e saboroso, excelente para coberturas de pizzas doces, açaí, sobremesas, brigadeiros e confeitaria em geral.",
+                price: 19.35,
+                unit: "un",
+                image: "images/amendoim_granulado_1kg.jpg",
+                category: "chocolates/doces",
+                tag: "Confeitaria",
+                tagClass: "tag-farinhas"
+            },
+            {
+                id: 61,
+                name: "Anéis de Cebola Bem Brasil 1,05kg",
+                desc: "Anéis de cebola formatados empanados pré-fritos congelados Bem Brasil em pacote de 1,05kg. Casquinha crocante e super dourada, zero gordura trans. Perfeito para porções, petiscos e lanches.",
+                price: 24.90,
+                unit: "un",
+                image: "images/aneis_de_cebola_1_05kg.png",
+                category: "congelados",
+                tag: "Petiscos",
+                tagClass: "tag-congelados"
+            },
+            {
+                id: 62,
+                name: "Batata 9mm Bem Brasil 2kg",
+                desc: "Batata palito pré-frita congelada 9mm Bem Brasil em pacote de 2kg. Corte tradicional, crocante por fora e macia por dentro, preparo rápido e zero gordura trans. Perfeita para porções, lanches e acompanhamentos.",
+                price: 25.49,
+                unit: "un",
+                image: "images/batata_9mm_bem_brasil_2kg.jpg",
+                category: "congelados",
+                tag: "Congelados",
+                tagClass: "tag-congelados"
+            },
+            {
+                id: 63,
+                name: "Apresuntado Friella Peça",
+                desc: "Apresuntado cozido Friella em peça. Sabor suave e excelente consistência para fatiar, ideal para pizzas, lanches, salgados e tábuas de frios.",
+                price: 13.50,
+                unit: "kg",
+                image: "images/apresuntado_friella.png",
+                category: "embutidos",
+                tag: "Apresuntado",
+                tagClass: "tag-embutidos"
+            },
+            {
+                id: 64,
+                name: "Tomate Seco Margherita Balde 2kg",
+                desc: "Tomate seco em conserva Margherita em balde de 2kg (peso drenado 1,4kg). Zero glúten, zero lactose. Sabor marcante e ideal para pizzas, massas, antepastos e culinária gourmet.",
+                price: 35.90,
+                unit: "un",
+                image: "images/tomate_seco_margherita_2kg.jpg",
+                category: "conservas",
+                tag: "Tomate Seco",
+                tagClass: "tag-conservas"
+            },
+            {
+                id: 65,
+                name: "Palmito de Pupunha Picado Roecker Balde 3kg",
+                desc: "Palmito de pupunha picado em conserva Roecker Alimentos em balde de 3kg (peso drenado 1,8kg). Linha Gourmet extra macio, sem glúten. Ideal para pizzas, tortas, risotos e culinária profissional.",
+                price: 28.99,
+                unit: "un",
+                image: "images/palmito_roecker_picado_3kg.jpg",
+                category: "conservas",
+                tag: "Palmito",
+                tagClass: "tag-conservas"
+            },
+            {
+                id: 66,
+                name: "Milho Verde em Conserva Stella d'Oro 2,3kg",
+                desc: "Milho verde em conserva Stella d'Oro em lata de 2,3kg (peso drenado 1,5kg). Zero adição de sal, zero sódio adicionado. Grãos selecionados e macios, ideais para pizzas, saladas e lanches.",
+                price: 17.99,
+                unit: "un",
+                image: "images/milho_stella_doro_2_3kg.jpg",
+                category: "conservas",
+                tag: "Milho Verde",
+                tagClass: "tag-conservas"
+            },
+            {
+                id: 67,
+                name: "Fermento Biológico Seco Itaiquara 500g",
+                desc: "Fermento biológico seco instantâneo Itaiquara Desde 1911. Ideal para pães e pizzas. Alta performance e fácil utilização, proporciona crescimento uniforme e resultado profissional. Peso líquido 500g.",
+                price: 15.99,
+                unit: "un",
+                image: "images/fermento_itaiquara_500g.jpg",
+                category: "diversos",
+                tag: "Fermento",
+                tagClass: "tag-farinhas"
+            },
+            {
+                id: 68,
+                name: "Maionese Tradicional D'ajuda Bag 3kg",
+                desc: "Maionese tradicional D'ajuda Food Service em embalagem bag de 3kg (2,9L). Utilize em receitas quentes e frias. Sabor suave e cremosidade perfeita para sanduíches, lanches, saladas e culinária em geral.",
+                price: 25.99,
+                unit: "un",
+                image: "images/maionese_bag_dajuda_3kg.jpg",
+                category: "diversos",
+                tag: "Maionese",
+                tagClass: "tag-molhos"
+            },
+            {
+                id: 69,
+                name: "Ovo de Codorna em Conserva Serra do Mar Balde 1kg",
+                desc: "Ovos em conserva de codorna Serra do Mar em balde. Peso líquido 1,7kg, peso drenado 1kg. Sem glúten, inspecionado SIP/POA. Ideal para pizzas, petiscos, saladas e tábuas de frios.",
+                price: 33.40,
+                unit: "un",
+                image: "images/ovo_codorna_balde_1kg.jpg",
+                category: "conservas",
+                tag: "Ovos",
+                tagClass: "tag-conservas"
+            },
+            {
+                id: 70,
+                name: "Fubá Mimoso Siloti 1kg",
+                desc: "Farinha fina de milho (Fubá Mimoso) Siloti, enriquecida com ferro e ácido fólico (Vitamina B9). Peso líquido 1kg. Garantia de qualidade para polenta, mingau, bolos e receitas culinárias.",
+                price: 3.70,
+                unit: "un",
+                image: "images/fuba_siloti_1kg.jpg",
+                category: "diversos",
+                tag: "Fubá",
+                tagClass: "tag-farinhas"
+            },
+            {
+                id: 71,
+                name: "Queijo Mussarela Fatiado Sotille 1kg",
+                desc: "Queijo mussarela fatiado Sotille, peso líquido 1kg. Sem glúten, contém lactose. Produzido por Vitte Indústria de Laticínios, inspecionado SIM/POA. Ideal para lanches, pizzas e sanduíches. Manter resfriado de 0°C a 8°C.",
+                price: 34.90,
+                unit: "un",
+                image: "images/mussarela_sotille_1kg.jpg",
+                category: "queijos",
+                tag: "Mussarela",
+                tagClass: "tag-queijos"
+            },
+            {
+                id: 72,
+                name: "Manteiga Sem Sal Friopac 1kg",
+                desc: "Manteiga sem sal Friopac Indústria de Laticínios, 1kg. Registrada SIP/POA. Não contém glúten, contém lactose. Validade até 120 dias. Ideal para culinária, confeitaria, pão de queijo e receitas profissionais.",
+                price: 23.99,
+                unit: "un",
+                image: "images/manteiga_friopac_1kg.jpg",
+                category: "queijos",
+                tag: "Manteiga",
+                tagClass: "tag-queijos"
+            },
+            {
+                id: 73,
+                name: "Pepperoni Fatiado Juliatto 500g",
+                desc: "Pepperoni fatiado Juliatto em pacote de 500g. Sabor defumado e picante característico, ideal para pizzas, lanches e porções especiais.",
+                price: 32.00,
+                unit: "un",
+                image: "images/pepperoni_juliatto.png",
+                category: "embutidos",
+                tag: "Pepperoni",
+                tagClass: "tag-embutidos"
+            },
+            {
+                id: 74,
+                name: "Champignon Fatiado Margherita 1kg",
+                desc: "Cogumelo champignon fatiado em conserva Margherita. Peso líquido 1,420kg, peso drenado 1,01kg. Zero gordura trans, zero lactose, zero glúten. Ideal para pizzas, risotos e culinária profissional.",
+                price: 27.40,
+                unit: "un",
+                image: "images/champignon_margherita_1kg.png",
+                category: "conservas",
+                tag: "Champignon",
+                tagClass: "tag-conservas"
+            },
+            {
+                id: 75,
+                name: "Champignon em Conserva Vale Fértil 1kg",
+                desc: "Champignon em conserva Vale Fértil. Peso líquido 1,6kg, peso drenado 1,01kg. Qualidade desde 1991, ideal para pizzas, massas, risotos e culinária profissional.",
+                price: 32.40,
+                unit: "un",
+                image: "images/champignon_vale_fertil_1kg.jpg",
+                category: "conservas",
+                tag: "Champignon",
+                tagClass: "tag-conservas"
+            },
+            {
+                id: 76,
+                name: "Filezinho Sassami Frango Maringá",
+                desc: "Filezinho Sassami congelado Frango Maringá. Carne de frango sem osso e sem pele congelada, macia e saborosa. Ideal para porções, recheios, pizzas e grelhados.",
+                price: 13.99,
+                unit: "kg",
+                image: "images/filezinho_sassami_frango_maringa.jpg",
+                category: "congelados",
+                tag: "Congelados",
+                tagClass: "tag-congelados"
+            },
+            {
+                id: 77,
+                name: "Filé de Peito Frango Maringá",
+                desc: "Filé de peito congelado Frango Maringá. Carne de frango sem osso e sem pele congelada, com alto rendimento e qualidade para recheios, pizzas, lanches e culinária.",
+                price: 14.40,
+                unit: "kg",
+                image: "images/file_de_peito_frango_maringa.jpg",
+                category: "congelados",
+                tag: "Congelados",
+                tagClass: "tag-congelados"
+            },
+            {
+                id: 78,
+                name: "Salsicha Hot Dog Perdigão 5kg",
+                desc: "Salsicha Hot Dog congelada Perdigão em pacote de 5kg. Saborosa, prática e com alto rendimento, perfeita para lanches, cachorros-quentes, porções e uso profissional no food service.",
+                price: 46.99,
+                unit: "un",
+                image: "images/salsicha_perdigao_5kg.png",
+                category: ["congelados", "embutidos"],
+                tag: "Congelados / Embutidos",
+                tagClass: "tag-embutidos"
+            },
+            {
+                id: 79,
+                name: "Bacon Cub Friella",
+                desc: "Bacon de suíno em cubos congelado Friella. Embutido cozido e defumado, ideal para pizzas, recheios, saladas e culinária profissional. Peso líquido 1kg.",
+                price: 23.00,
+                unit: "un",
+                image: "images/bacon_cub_friella.jpg",
+                category: ["embutidos", "bacons"],
+                tag: "Bacon",
+                tagClass: "tag-embutidos"
+            },
+            {
+                id: 80,
+                name: "Bacon Cub B Vista",
+                desc: "Bacon de pernil em cubos Bela Vista Basso Alimentos. Defumado e temperado, com sabor marcante e textura firme. Ideal para pizzas, recheios e culinária em geral. Peso líquido 1kg.",
+                price: 18.20,
+                unit: "un",
+                image: "images/bacon_cub_b_vista.jpg",
+                category: ["embutidos", "bacons"],
+                tag: "Bacon",
+                tagClass: "tag-embutidos"
+            },
+            {
+                id: 81,
+                name: "Bacon Cubos Sigma",
+                desc: "Bacon especial de pernil em cubos Sigma Alimentos. Defumado com sabor intenso e textura perfeita para pizzas, porções, ovos mexidos e culinária profissional. Peso líquido 1kg.",
+                price: 23.15,
+                unit: "un",
+                image: "images/bacon_cub_sigma.jpg",
+                category: ["embutidos", "bacons"],
+                tag: "Bacon",
+                tagClass: "tag-embutidos"
+            },
+            {
+                id: 82,
+                name: "Bacon Fatiado Alegra",
+                desc: "Bacon em fatias defumado Alegra em embalagem de 2,7kg. Fatias uniformes com sabor defumado intenso, perfeitas para grelhados, lanches, hambúrgueres e culinária profissional.",
+                price: 36.99,
+                unit: "un",
+                image: "images/bacon_fat_alegra.jpg",
+                category: ["embutidos", "bacons"],
+                tag: "Bacon",
+                tagClass: "tag-embutidos"
+            },
+            {
+                id: 83,
+                name: "Bacon Manta Friella",
+                desc: "Bacon com pele em manta Friella. Suíno com pele, defumado e de alta qualidade, ideal para fatiar, grelhar e uso em receitas profissionais.",
+                price: 26.80,
+                unit: "kg",
+                image: "images/bacon_manta_friella.jpg",
+                category: ["embutidos", "bacons"],
+                tag: "Bacon",
+                tagClass: "tag-embutidos"
+            },
+            {
+                id: 84,
+                name: "Choco Bar Bco Doceiro 1,005kg",
+                desc: "Cobertura fracionada sabor chocolate branco Doceiro Haenssgen. Não necessita temperagem, ideal para bombons, tabletes e recheios. Peso líquido 1,005kg.",
+                price: 24.50,
+                unit: "un",
+                image: "images/choco_bar_bco_doceiro.jpg",
+                category: "chocolates/doces",
+                tag: "Chocolate",
+                tagClass: "tag-farinhas"
+            },
+            {
+                id: 85,
+                name: "Choco Bar Lei Doceiro 1,005kg",
+                desc: "Cobertura fracionada sabor chocolate ao leite Doceiro Haenssgen. Não necessita temperagem, perfeita para bombons, tabletes e rechear doces. Peso líquido 1,005kg.",
+                price: 24.99,
+                unit: "un",
+                image: "images/choco_bar_leite_doceiro.jpg",
+                category: "chocolates/doces",
+                tag: "Chocolate",
+                tagClass: "tag-farinhas"
+            },
+            {
+                id: 86,
+                name: "Confeitosa Branco 1,005kg",
+                desc: "Recheio forneavel sabor chocolate branco Confeitosa. Resiste até 200°C, ideal para pastéis, pizzas, croissants, recheios e coberturas de bolos e tortas. Peso líquido 1,005kg.",
+                price: 20.99,
+                unit: "un",
+                image: "images/confeitosa_branco.jpg",
+                category: "chocolates/doces",
+                tag: "Chocolate",
+                tagClass: "tag-farinhas"
+            },
+            {
+                id: 87,
+                name: "Confeitosa Leite 1,005kg",
+                desc: "Recheio forneavel sabor chocolate ao leite Confeitosa. Resiste até 200°C, ideal para pastéis, pizzas, croissants, recheios e coberturas de bolos e tortas. Peso líquido 1,005kg.",
+                price: 22.85,
+                unit: "un",
+                image: "images/confeitosa_leite.jpg",
+                category: "chocolates/doces",
+                tag: "Chocolate",
+                tagClass: "tag-farinhas"
+            },
+            {
+                id: 88,
+                name: "Doceiro Ralado Leite 1,005kg",
+                desc: "Cobertura sabor chocolate ao leite ralado Doceiro Haenssgen. Ideal para decorar e cobrir pizzas, tortas, bolos, sorvetes e sobremesas. Peso líquido 1,005kg.",
+                price: 26.59,
+                unit: "un",
+                image: "images/doceiro_ralado_leite.jpg",
+                category: "chocolates/doces",
+                tag: "Chocolate",
+                tagClass: "tag-farinhas"
+            },
+            {
+                id: 89,
+                name: "Doceiro Ralado Bco 1,005kg",
+                desc: "Cobertura sabor chocolate branco ralado Doceiro Haenssgen. Ideal para decorar e cobrir pizzas, tortas, bolos, sorvetes e sobremesas. Peso líquido 1,005kg.",
+                price: 26.50,
+                unit: "un",
+                image: "images/doceiro_ralado_branco.jpg",
+                category: "chocolates/doces",
+                tag: "Chocolate",
+                tagClass: "tag-farinhas"
+            },
+            {
+                id: 90,
+                name: "Lombo Fatiado Basso 1kg",
+                desc: "Lombo defumado e fatiado BelaVista Basso em embalagem de 1kg. Fatias selecionadas de alta qualidade e sabor marcante, ideal para pizzas, lanches e porções.",
+                price: 24.99,
+                unit: "un",
+                image: "images/lombo_fatiado_basso_1kg.jpg",
+                category: "embutidos",
+                tag: "Lombo",
+                tagClass: "tag-embutidos"
+            },
+            {
+                id: 91,
+                name: "Pepperoni Bonatti 500g",
+                desc: "Embutido cozido de carne suína sabor pepperoni defumado e fatiado Bonatti em embalagem de 500g. Prático, saboroso e com fatias uniformes para pizzas e lanches.",
+                price: 18.00,
+                unit: "un",
+                image: "images/pepperoni_bonatti_500g.jpg",
+                category: "embutidos",
+                tag: "Pepperoni",
+                tagClass: "tag-embutidos"
+            },
+            {
+                id: 92,
+                name: "Queijo Provolone",
+                desc: "Queijo provolone defumado em peça. Sabor marcante, consistência firme e aroma característico, excelente para pizzas, tábuas de frios, petiscos e receitas.",
+                price: 43.50,
+                unit: "kg",
+                image: "images/queijo_provolone.jpg",
+                category: "queijos",
+                tag: "Provolone",
+                tagClass: "tag-queijos"
+            },
+            {
+                id: 93,
+                name: "Queijo Parmesão",
+                desc: "Queijo parmesão de sabor marcante, textura granulada e maturação no ponto certo. Excelente para ralar, gratinar massas, pizzas, risotos e finalização de pratos.",
+                price: 44.90,
+                unit: "kg",
+                image: "images/queijo_parmesao.png",
+                category: "queijos",
+                tag: "Parmesão",
+                tagClass: "tag-queijos"
+            },
+            {
+                id: 94,
+                name: "Calabresa Fatiada Bonatti 1kg",
+                desc: "Linguiça tipo calabresa cozida e defumada fatiada Bonatti em pacote de 1kg. Fatias padronizadas, sabor defumado autêntico e máxima praticidade para pizzas e lanches.",
+                price: 22.45,
+                unit: "un",
+                image: "images/calabresa_fatiada_bonatti_1kg.jpg",
+                category: "embutidos",
+                tag: "Calabresa",
+                tagClass: "tag-embutidos"
+            },
+            {
+                id: 95,
+                name: "Pimenta Calabresa Luzago 100g",
+                desc: "Pimenta calabresa em flocos Luzago Alimentos em pacote de 100g. Picância equilibrada e aroma marcante, perfeita para pizzas, molhos, carnes e temperos profissionais.",
+                price: 5.80,
+                unit: "un",
+                image: "images/pimenta_calabresa_luzago_100g.jpg",
+                category: "diversos",
+                tag: "Pimenta",
+                tagClass: "tag-diversos"
+            },
+            {
+                id: 96,
+                name: "Manjericão Luzago 100g",
+                desc: "Manjericão desidratado Luzago Alimentos em embalagem de 100g. Aroma fresco e marcante, ideal para molhos de tomate, pizzas margherita, massas e temperos.",
+                price: 4.99,
+                unit: "un",
+                image: "images/manjericao_luzago_100g.jpg",
+                category: "diversos",
+                tag: "Manjericão",
+                tagClass: "tag-diversos"
+            },
+            {
+                id: 97,
+                name: "Catupiry Galileo 1,5kg",
+                desc: "Mistura de requeijão e gordura vegetal e amido Galileo Coronato em bisnaga de 1,5kg. Excelente cremosidade, estabilidade e rendimento para pizzas, bordas, coxinhas e recheios.",
+                price: 15.20,
+                unit: "un",
+                image: "images/catupiry_galileo_1_5kg.jpg",
+                category: "mistura",
+                tag: "Mistura Culinária",
+                tagClass: "tag-farinhas"
+            },
+            {
+                id: 98,
+                name: "Choco Power Ball Mavalério 500g",
+                desc: "Cereal de arroz com cobertura sabor chocolate e chocolate branco (mesclado) Choco Power Ball Mavalério em pacote de 500g. Crocante e delicioso, perfeito para decoração de pizzas doces, açaí, bolos, tortas e sobremesas.",
+                price: 25.50,
+                unit: "un",
+                image: "images/choco_power_ball_mavalerio_500g.jpg",
+                category: "chocolates/doces",
+                tag: "Confeitaria",
+                tagClass: "tag-farinhas"
+            },
+            {
+                id: 99,
+                name: "Coco Ralado Mais Coco 1kg",
+                desc: "Coco ralado úmido e adoçado Mais Coco em pacote de 1kg. Produto de alta qualidade, ideal para coberturas de pizzas doces, brigadeiros, bolos, sobremesas e confeitaria em geral.",
+                price: 39.99,
+                unit: "un",
+                image: "images/coco_ralado_mais_coco_1kg.png",
+                category: "chocolates/doces",
+                tag: "Confeitaria",
+                tagClass: "tag-farinhas"
+            },
+            {
+                id: 100,
+                name: "Fermento Seco Fleischmann 500g",
+                desc: "Fermento biológico seco instantâneo Fleischmann para pães e pizzas em embalagem de 500g. Alto poder fermentativo e tecnologia avançada para massas profissionais.",
+                price: 26.99,
+                unit: "un",
+                image: "images/fermento_fleischmann_500g.png",
+                category: "diversos",
+                tag: "Fermento",
+                tagClass: "tag-diversos"
+            },
+            {
+                id: 101,
+                name: "Chocolate Granulado Harald 1kg",
+                desc: "Granulado macio sabor chocolate Harald Confeiteiro em embalagem de 1,010kg. Ideal para decorar docinhos, brigadeiros, bolos e pizzas doces.",
+                price: 23.99,
+                unit: "un",
+                image: "images/chocolate_granulado_harald_1kg.jpg",
+                category: "chocolates/doces",
+                tag: "Chocolate",
+                tagClass: "tag-farinhas"
+            },
+            {
+                id: 102,
+                name: "Caldo de Galinha Tecnutri 1kg",
+                desc: "Caldo de galinha Tecnutri Food Service em pacote de 1,01kg. Perfeito para massas de salgados, recheios, caldos e sopas. Rende até 80 litros de caldo pronto.",
+                price: 9.99,
+                unit: "un",
+                image: "images/caldo_de_galinha_tecnutri_1kg.jpg",
+                category: "diversos",
+                tag: "Diversos",
+                tagClass: "tag-diversos"
+            },
+            {
+                id: 103,
+                name: "Carne Seca Desfiada Alfama 1kg",
+                desc: "Carne temperada cozida desfiada congelada de bovino sabor carne seca Alfama em pacote de 1kg. Rende muito, sabor autêntico, preparo prático e rápido para pizzas, salgados e lanches.",
+                price: 67.90,
+                unit: "un",
+                image: "images/carne_seca_alfama_1kg.jpg",
+                category: "congelados",
+                tag: "Carne",
+                tagClass: "tag-congelados"
+            },
+            {
+                id: 104,
+                name: "Costela Desfiada Alfama 1kg",
+                desc: "Carne temperada cozida desfiada congelada de bovino sabor costela Alfama em pacote de 1kg. Carne bovina selecionada, fibras longas, preparo rápido para pizzas, esfihas e salgados.",
+                price: 67.90,
+                unit: "un",
+                image: "images/costela_desfiada_alfama_1kg.jpg",
+                category: "congelados",
+                tag: "Carne",
+                tagClass: "tag-congelados"
+            },
+            {
+                id: 105,
+                name: "Confetti Coloreti Jazam 500g",
+                desc: "Pastilhas confeitadas sabor chocolate Confetti Coloreti Jazam em pacote de 500g. Coloridas e crocantes, ideais para decoração de pizzas doces, bolos, brigadeiros e sobremesas.",
+                price: 21.49,
+                unit: "un",
+                image: "images/confetti_coloreti_500g.jpg",
+                category: "chocolates/doces",
+                tag: "Confeitaria",
+                tagClass: "tag-farinhas"
+            },
+            {
+                id: 106,
+                name: "Ervilha Pequena Stella d'Oro Lata",
+                desc: "Ervilha em conserva Stella d'Oro em lata de 280g (170g drenado). Zero adição de sal. Grãos pequenos e macios, ideais para pizzas, saladas, recheios e culinária em geral.",
+                price: 2.99,
+                unit: "un",
+                image: "images/ervilha_stella_doro_lata.jpg",
+                category: "conservas",
+                tag: "Ervilha",
+                tagClass: "tag-conservas"
+            },
+            {
+                id: 107,
+                name: "Ervilha Grande Quero 2,7kg",
+                desc: "Ervilha em conserva Quero Food Service em lata de 2,7kg (1,7kg drenado). Fonte de fibras, pronto para servir. Grãos grandes e saborosos para pizzas, recheios, saladas e pratos profissionais.",
+                price: 22.49,
+                unit: "un",
+                image: "images/ervilha_quero_2_7kg.png",
+                category: "conservas",
+                tag: "Ervilha",
+                tagClass: "tag-conservas"
+            },
+            {
+                id: 108,
+                name: "Cheddar Top 1,2kg",
+                desc: "Mistura culinária sabor cheddar em embalagem de 1,2kg. Cremoso e saboroso, ideal para lanches, hambúrgueres, pizzas e preparações que exigem sabor cheddar intenso.",
+                price: 11.90,
+                unit: "un",
+                image: "images/cheddar_top_1_2kg.jpg",
+                category: ["cheddar", "mistura"],
+                tag: "Cheddar",
+                tagClass: "tag-cheddar"
+            },
+            {
+                id: 109,
+                name: "Figos em Calda Citrocal Lata",
+                desc: "Figos em calda Citrocal Alimentos em lata de 820g (400g drenado). Figos inteiros e macios, perfeitos para coberturas de pizzas doces, sobremesas, bolos e confeitaria em geral.",
+                price: 14.99,
+                unit: "un",
+                image: "images/figo_em_calda_citrocal_lata.jpg",
+                category: "conservas",
+                tag: "Conservas",
+                tagClass: "tag-conservas"
+            },
+            {
+                id: 110,
+                name: "Sonho de Valsa Lacta 1kg",
+                desc: "Bombom Sonho de Valsa Lacta embalagem econômica de 1kg. Recheio de creme de amendoim coberto com chocolate ao leite, clássico brasileiro ideal para festas, confeitaria e presentear.",
+                price: 56.70,
+                unit: "un",
+                image: "images/sonho_de_valsa_lacta_1kg.jpg",
+                category: "chocolates/doces",
+                tag: "Chocolate",
+                tagClass: "tag-farinhas"
+            },
+            {
+                id: 111,
+                name: "Ouro Branco Lacta 1kg",
+                desc: "Bombom Ouro Branco Lacta embalagem econômica de 1kg. Biscoito wafer coberto com chocolate branco recheado com creme de leite, um clássico irresistível para festas e confeitaria.",
+                price: 56.90,
+                unit: "un",
+                image: "images/ouro_branco_lacta_1kg.jpg",
+                category: "chocolates/doces",
+                tag: "Chocolate",
+                tagClass: "tag-farinhas"
+            },
+            {
+                id: 112,
+                name: "Batata Palito 7mm LambWeston 2kg",
+                desc: "Batata pré-frita ultracongelada corte fino 7mm LambWeston em pacote de 2kg. Sem glúten, crocante por fora e macia por dentro, ideal para frituras profissionais em restaurantes e lanchonetes.",
+                price: 32.60,
+                unit: "un",
+                image: "images/batata_7mm_lambweston_2_25kg.jpg",
+                category: "congelados",
+                tag: "Batata",
+                tagClass: "tag-congelados"
+            },
+            {
+                id: 113,
+                name: "Queijo Gorgonzola São Vicente",
+                desc: "Queijo maturado com mofo azul São Vicente fracionado, tradição dinamarquesa. Sabor intenso e marcante, ideal para molhos, risottos, pizzas gourmet e tábuas de frios.",
+                price: 66.20,
+                unit: "kg",
+                image: "images/queijo_gorgonzola_sao_vicente.jpg",
+                category: "queijos",
+                tag: "Queijo",
+                tagClass: "tag-queijos"
+            },
+            {
+                id: 114,
+                name: "Peito de Peru Fatiado Sotille 300g",
+                desc: "Peito de peru defumado fatiado Sotille em embalagem de 300g. Sem glúten, sabor suave e textura macia, ideal para sanduíches, lanches, wraps e culinária em geral.",
+                price: 17.00,
+                unit: "un",
+                image: "images/peito_de_peru_sotille_300g.jpg",
+                category: "embutidos",
+                tag: "Embutidos",
+                tagClass: "tag-embutidos"
+            },
+            {
+                id: 115,
+                name: "Pêssegos em Calda Citrocal Lata",
+                desc: "Pêssegos em calda Citrocal Alimentos em metades, lata de 830g (450g drenado). Pêssegos macios e saborosos, ideais para coberturas de pizzas doces, sobremesas, bolos e confeitaria.",
+                price: 11.70,
+                unit: "un",
+                image: "images/pessegos_em_calda_citrocal_lata.jpg",
+                category: "conservas",
+                tag: "Conservas",
+                tagClass: "tag-conservas"
+            },
+            {
+                id: 116,
+                name: "Atum Ralado em Óleo Pescador 140g",
+                desc: "Atum ralado em óleo comestível Pescador em lata de 140g (105g drenado). Rico em Ômega 3, fonte de proteína e vitamina D. Ideal para pizzas, saladas, recheios e sanduíches.",
+                price: 6.75,
+                unit: "un",
+                image: "images/atum_ralado_pescador_140g.jpg",
+                category: "conservas",
+                tag: "Atum",
+                tagClass: "tag-conservas"
+            },
+            {
+                id: 117,
+                name: "Atum Sólido Marsul 400g",
+                desc: "Atum sólido em salmoura com óleo comestível Conservas Marsul em lata de 400g (300g drenado). Pedaços inteiros e firmes, ideais para pizzas, saladas, recheios e pratos profissionais.",
+                price: 25.40,
+                unit: "un",
+                image: "images/atum_solido_marsul_400g.jpg",
+                category: "conservas",
+                tag: "Atum",
+                tagClass: "tag-conservas"
+            },
+            {
+                id: 118,
+                name: "Batata Palha Estrelinha 1kg",
+                desc: "Batata palha crocante Estrelinha em pacote de 1kg. Super crocante e saborosa, perfeita para lanches, cachorros-quentes, estrogonofes, pizzas e receitas em geral.",
+                price: 18.90,
+                unit: "un",
+                image: "images/batata_palha_estrelinha_1kg.jpg",
+                category: "",
+                tag: "Batata Palha",
+                tagClass: "tag-congelados"
+            },
+            {
+                id: 119,
+                name: "Batata Palha Hot Fritas 1kg",
+                desc: "Batata palha Hot Fritas muito mais crocante em pacote de 1kg (0% gordura trans). Ideal para hot dogs, lanches, porções, pizzas e diversas receitas profissionais.",
+                price: 19.90,
+                unit: "un",
+                image: "images/batata_palha_hot_fritas_1kg.png",
+                category: "",
+                tag: "Batata Palha",
+                tagClass: "tag-congelados"
+            },
+            {
+                id: 120,
+                name: "Fermento Fresco Itaiquara",
+                desc: "Fermento biológico fresco forte Itaiquara Desde 1911. Alta capacidade fermentativa para pães e pizzas artesanais e profissionais. Não contém glúten. Produto de referência no mercado desde 1911.",
+                price: 8.49,
+                unit: "un",
+                image: "images/fermento_fresco_itaiquara.jpg",
+                category: "diversos",
+                tag: "Fermento",
+                tagClass: "tag-diversos"
+            },
+            {
+                id: 121,
+                name: "Canela em Pó Toscana 250g",
+                desc: "Tempero preparado à base de canela em pó Toscana em embalagem de 250g. Sabor marcante e aroma inconfundível, ideal para bolos, doces, pizzas doces, bebidas e uso culinário em geral.",
+                price: 13.60,
+                unit: "un",
+                image: "images/canela_po_toscana_250g.jpg",
+                category: "diversos",
+                tag: "Canela",
+                tagClass: "tag-diversos"
+            },
+            {
+                id: 122,
+                name: "Presunto Fat Vácuo",
+                desc: "Presunto fatiado embalado a vácuo. Fatias macias e saborosas de presunto de alta qualidade, ideal para pizzas, lanches, sanduíches e culinária em geral. Vendido por kg.",
+                price: 22.90,
+                unit: "kg",
+                image: "images/presunto_fat_vacuo.jpg",
+                category: "embutidos",
+                tag: "Presunto",
+                tagClass: "tag-embutidos"
+            },
+            {
+                id: 123,
+                name: "Presunto Inteiro Friella",
+                desc: "Presunto cozido inteiro Friella sem capa de gordura. Produto de alta qualidade, textura macia e sabor suave, ideal para fatiar na hora, pizzas, lanches, sanduíches e culinária profissional. Vendido por kg.",
+                price: 18.20,
+                unit: "kg",
+                image: "images/presunto_inteiro_friella.jpg",
+                category: "embutidos",
+                tag: "Presunto",
+                tagClass: "tag-embutidos"
+            },
+            {
+                id: 124,
+                name: "Mussarela Aquarela",
+                desc: "Queijo mussarela Aquarela Alimentos em peça. Textura firme, derretimento uniforme e sabor suave e levemente adocicado. Ideal para pizzas, lanches, gratinados e culinária em geral.",
+                price: 31.90,
+                unit: "un",
+                image: "images/mussarela_aquarela.jpg",
+                category: "queijos",
+                tag: "Mussarela",
+                tagClass: "tag-queijos"
+            },
+            {
+                id: 125,
+                name: "Pepperoni JCW 500g",
+                desc: "Linguiça cozida sabor pepperoni JCW Aliminada em embalagem de 500g. Fatias temperadas com sabor defumado e levemente picante, ideais para pizzas, lanches e culinária profissional.",
+                price: 24.00,
+                unit: "un",
+                image: "images/pepperoni_jcw_500g.jpg",
+                category: "embutidos",
+                tag: "Pepperoni",
+                tagClass: "tag-embutidos"
+            },
+            {
+                id: 126,
+                name: "Pasta Alho Santa Massa 1kg",
+                desc: "Pasta de alho forneável Santa Massa em embalagem de 1,010kg. Uso culinário, pronta para usar, ideal para rechear pizzas, tortas, pães e salgados. Alta praticidade e rendimento.",
+                price: 26.90,
+                unit: "un",
+                image: "images/pasta_alho_santa_massa_1kg.jpg",
+                category: "diversos",
+                tag: "Diversos",
+                tagClass: "tag-diversos"
+            },
+            {
+                id: 127,
+                name: "Cream Cheese Alcremo 1,01kg",
+                desc: "Cream cheese (queijo cremoso) Alcremo Alimentos em embalagem de 1,01kg. Sem gordura vegetal, de Minas para você. Textura suave e sabor levemente ácido, ideal para recheios de pizzas, tortas, cheesecakes, salgados e culinária profissional.",
+                price: 26.90,
+                unit: "un",
+                image: "images/cream_cheese_alcremo_1kg.jpg",
+                category: "requeijao",
+                tag: "Requeijão Cremoso",
+                tagClass: "tag-requeijao"
+            },
+            {
+                id: 128,
+                name: "Farinha Tia Ofélia 5kg",
+                desc: "Farinha de trigo tipo 1 Tia Ofélia enriquecida com ferro e ácido fólico (Vitamina B9). Peso líquido 5kg. Alta qualidade para panificação, pizzas, salgados e receitas profissionais.",
+                price: 13.90,
+                unit: "un",
+                image: "images/farinha_tia_ofelia.png",
+                category: "diversos",
+                tag: "Farinha",
+                tagClass: "tag-diversos"
+            },
+            {
+                id: 129,
+                name: "Farinha Anaconda 5kg",
+                desc: "Farinha de trigo tipo 1 Anaconda Tradicional em embalagem de 5kg. Enriquecida com ferro e ácido fólico. Indústria brasileira, ideal para pizzas, pães, salgados e receitas profissionais.",
+                price: 17.99,
+                unit: "un",
+                image: "images/farinha_anaconda_5kg.jpg",
+                category: "diversos",
+                tag: "Farinha",
+                tagClass: "tag-diversos"
+            },
+            {
+                id: 130,
+                name: "Lombo Fat Bonatti",
+                desc: "Lombo tipo canadense fatiado Bonatti embalado a vácuo. Defumado, macio e saboroso, com fatias uniformes de alta qualidade. Ideal para pizzas, lanches, sanduíches e culinária profissional.",
+                price: 26.50,
+                unit: "un",
+                image: "images/lombo_fat_bonatti.jpg",
+                category: "embutidos",
+                tag: "Lombo",
+                tagClass: "tag-embutidos"
+            },
+            {
+                id: 131,
+                name: "Calabresa Fatiada Basso 1kg",
+                desc: "Linguiça calabresa cozida fatiada BelaVista Basso Alimentos em embalagem de 1kg. Fatias padronizadas com sabor defumado autêntico e textura firme, ideal para pizzas, lanches e receitas profissionais.",
+                price: 18.49,
+                unit: "un",
+                image: "images/calabresa_fatiada_basso_1kg.jpg",
+                category: "embutidos",
+                tag: "Calabresa",
+                tagClass: "tag-embutidos"
+            },
+            {
+                id: 132,
+                name: "Batata Palha Wanflo Extra Fina 1kg",
+                desc: "Batata palha extra fina Wanflo em embalagem de 1kg. Sem conservantes e sem colesterol, 100% gordura de palma. Crocante e saborosa, ideal para lanches, cachorros-quentes, pizzas e receitas profissionais.",
+                price: 28.90,
+                unit: "un",
+                image: "images/batata_palha_wanflo_1kg.jpg",
+                category: "diversos",
+                tag: "Batata Palha",
+                tagClass: "tag-diversos"
+            },
+            {
+                id: 133,
+                name: "Mesinha para Pizza",
+                desc: "Suporte plástico para caixa de pizza (mesinha salva-pizza) em pacote com várias unidades. Evita que a tampa da caixa encoste na pizza, preservando a apresentação e a qualidade do produto durante a entrega.",
+                price: 26.99,
+                unit: "un",
+                image: "images/mesinha_pizza.jpg",
+                category: "diversos",
+                tag: "Utensílios",
+                tagClass: "tag-diversos"
+            },
+            {
+                id: 134,
+                name: "Calabresa Fat Sigma 1kg",
+                desc: "Linguiça tipo calabresa resfriada fatiada Sigma Alimentos em embalagem de 1kg. Fatias uniformes com sabor defumado autêntico e textura firme, ideais para pizzas, lanches e culinária profissional.",
+                price: 18.99,
+                unit: "un",
+                image: "images/calabresa_fat_sigma_1kg.jpg",
+                category: "embutidos",
+                tag: "Calabresa",
+                tagClass: "tag-embutidos"
+            },
+            {
+                id: 135,
+                name: "Caldo de Carne Tecnutri 1kg",
+                desc: "Caldo de carne Tecnutri Food Service em pacote de 1,01kg. Nova fórmula, perfeito para massas de salgados, sopas, caldos e molhos. Versátil e com gostinho caseiro. Rende até 50 litros de caldo pronto.",
+                price: 10.70,
+                unit: "un",
+                image: "images/caldo_de_carne_tecnutri_1kg.png",
+                category: "diversos",
+                tag: "Diversos",
+                tagClass: "tag-diversos"
+            },
+            {
+                id: 136,
+                name: "Catchup Sachê Dajuda",
+                desc: "Catchup Dajuda em sachês práticos para uso individual. Sabor equilibrado e marcante, ideal para lanchonetes, pizzarias e hamburguerias. Caixa contendo 192 sachês de 7g cada (total 1,34kg).",
+                price: 17.20,
+                unit: "un",
+                image: "images/catchup_sache_dajuda.png",
+                category: "diversos",
+                tag: "Diversos",
+                tagClass: "tag-diversos"
+            },
+            {
+                id: 137,
+                name: "Goiabada Cremosa Bom Princípio 1,01kg",
+                desc: "Goiabada cremosa Bom Princípio pronta para o uso em manga de confeitar de 1,01kg. Forneável e prática, perfeita para rechear e cobrir pizzas doces, bolos, rocamboles, pasteis e sobremesas.",
+                price: 17.99,
+                unit: "un",
+                image: "images/goiabada_cremosa_bom_principio_1kg.png",
+                category: "chocolates/doces",
+                tag: "Doces",
+                tagClass: "tag-farinhas"
+            },
+            {
+                id: 138,
+                name: "Maionese Dajuda Tradicional 1,01kg",
+                desc: "Maionese tradicional Dajuda em embalagem econômica de 1,01kg (990ml). Textura cremosa e sabor marcante, perfeita para lanches, hambúrgueres, maioneses temperadas, saladas e porções.",
+                price: 9.35,
+                unit: "un",
+                image: "images/maionese_dajuda_1kg.png",
+                category: "diversos",
+                tag: "Diversos",
+                tagClass: "tag-diversos"
+            },
+            {
+                id: 139,
+                name: "Molho de Pimenta Sachê Dajuda",
+                desc: "Molho de pimenta tradicional Dajuda em sachês individuais. Prático, higiênico e com picância equilibrada para realçar o sabor de pizzas, salgados e porções. Caixa contendo 250 sachês de 3ml cada.",
+                price: 23.89,
+                unit: "un",
+                image: "images/molho_pimenta_sache_dajuda.png",
+                category: "diversos",
+                tag: "Diversos",
+                tagClass: "tag-diversos"
+            },
+            {
+                id: 140,
+                name: "Calabresa Inteira Basso 2,5kg",
+                desc: "Linguiça calabresa inteira reta Bela Vista Basso em pacote de 2,5kg embalado a vácuo. Defumada no ponto certo, com excelente rendimento e sabor marcante para pizzas, recheios e porções.",
+                price: 17.40,
+                unit: "kg",
+                image: "images/calabresa_inteira_basso_2_5kg.jpg",
+                category: "embutidos",
+                tag: "Calabresa",
+                tagClass: "tag-embutidos"
+            },
+            {
+                id: 141,
+                name: "Leite Condensado Piracanjuba 395g",
+                desc: "Leite condensado semidesnatado Piracanjuba 395g com 6% de gordura. Consistência perfeita e sabor marcante para o preparo de sobremesas, pudins, coberturas, recheios doces e brigadeiros.",
+                price: 6.30,
+                unit: "un",
+                image: "images/leite_condensado_piracanjuba_395g.png",
+                category: "diversos",
+                tag: "Diversos",
+                tagClass: "tag-diversos"
+            }
+        ];
+        // ===== STATE =====
+        let activeCategory = 'todos';
+        let searchQuery = '';
+
+        // ===== RENDER PRODUCTS =====
+        function renderProducts() {
+            const grid = document.getElementById('productsGrid');
+            const countEl = document.getElementById('productsCount');
+
+            const filtered = products.filter(p => {
+                const matchCategory = activeCategory === 'todos' ||
+                    (Array.isArray(p.category)
+                        ? p.category.some(c => c.toLowerCase() === activeCategory.toLowerCase() || (activeCategory === 'chocolates/doces' && c.toLowerCase() === 'chocolates'))
+                        : (p.category && (p.category.toLowerCase() === activeCategory.toLowerCase() || (activeCategory === 'chocolates/doces' && p.category.toLowerCase() === 'chocolates'))));
+                const matchSearch = searchQuery === '' ||
+                    p.name.toLowerCase().includes(searchQuery) ||
+                    p.desc.toLowerCase().includes(searchQuery) ||
+                    p.tag.toLowerCase().includes(searchQuery) ||
+                    (Array.isArray(p.category) ? p.category.some(c => c.toLowerCase().includes(searchQuery)) : (p.category && p.category.toLowerCase().includes(searchQuery)));
+                return matchCategory && matchSearch;
+            });
+
+            countEl.innerHTML = `<span>${filtered.length}</span> produto${filtered.length !== 1 ? 's' : ''} encontrado${filtered.length !== 1 ? 's' : ''}`;
+
+            if (filtered.length === 0) {
+                grid.innerHTML = `
+                    <div class="no-results">
+                        <div class="no-icon">🔎</div>
+                        <h3>Nenhum produto encontrado</h3>
+                        <p>Tente ajustar os filtros ou a busca para encontrar o que precisa.</p>
+                    </div>
+                `;
+                return;
+            }
+
+            grid.innerHTML = filtered.map((p, i) => `
+                <div class="product-card" style="animation-delay: ${i * 0.05}s">
+                    <div class="product-image-wrapper">
+                        <img src="${p.image}" alt="${p.name}" loading="lazy">
+                        <span class="product-tag ${p.tagClass}">${p.tag}</span>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">${p.name}</h3>
+                        <p class="product-desc">${p.desc}</p>
+                        <div class="product-price">
+                            <span class="currency">R$</span> ${p.price.toFixed(2).replace('.', ',')}${p.unit ? ` <span class="product-unit" style="font-size: 0.6em; font-weight: 500; color: #666; vertical-align: middle;">${p.unit}</span>` : ''}
+                        </div>
+                        <button class="product-btn" id="btn-product-${p.id}" onclick="openModal(${p.id})">Mais informa&#231;&#245;es</button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // ===== FILTER HANDLERS =====
+        function filterCategory(btn) {
+            document.querySelectorAll('.category-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            activeCategory = btn.dataset.category;
+            // Limpa a barra de pesquisa ao trocar de categoria
+            searchQuery = '';
+            document.getElementById('searchInput').value = '';
+            renderProducts();
+        }
+
+        // ===== SEARCH =====
+        document.getElementById('searchInput').addEventListener('focus', function () {
+            // Ao focar na barra de pesquisa, seleciona automaticamente a categoria "todos"
+            const todosBtn = document.querySelector('.category-btn[data-category="todos"]');
+            if (todosBtn && activeCategory !== 'todos') {
+                document.querySelectorAll('.category-btn').forEach(b => b.classList.remove('active'));
+                todosBtn.classList.add('active');
+                activeCategory = 'todos';
+                renderProducts();
+            }
+        });
+
+        document.getElementById('searchInput').addEventListener('input', function (e) {
+            searchQuery = e.target.value.toLowerCase().trim();
+            renderProducts();
+        });
+
+        // ===== MOBILE MENU =====
+        document.getElementById('mobileMenuBtn').addEventListener('click', function () {
+            document.getElementById('navLinks').classList.toggle('open');
+        });
+
+        // ===== MODAL =====
+        function openModal(id = 3) {
+            const product = products.find(p => p.id === id) || products.find(p => p.id === 3);
+            if (!product) return;
+            const overlay = document.getElementById('productModal');
+            document.getElementById('modalImg').src = product.image;
+            document.getElementById('modalImg').alt = product.name;
+            document.getElementById('modalTag').textContent = product.tag;
+            document.getElementById('modalTag').className = 'modal-tag ' + product.tagClass;
+            document.getElementById('modalTitle').textContent = product.name;
+            document.getElementById('modalDesc').textContent = product.desc;
+            document.getElementById('modalPrice').textContent = product.price.toFixed(2).replace('.', ',');
+            document.getElementById('modalUnit').textContent = '/ ' + product.unit;
+            const waMsg = encodeURIComponent('Olá! Tenho interesse no produto: ' + product.name + ' - R$ ' + product.price.toFixed(2).replace('.', ',') + '/' + product.unit);
+            document.getElementById('modalWhatsapp').href = 'https://wa.me/5541987106153?text=' + waMsg;
+            overlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            document.getElementById('productModal').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        document.getElementById('modalClose').addEventListener('click', closeModal);
+
+        document.getElementById('productModal').addEventListener('click', function (e) {
+            if (e.target === this) closeModal();
+        });
+
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') closeModal();
+        });
+
+        // ===== INIT =====
+        renderProducts();
+    </script>
+
+
+    <!-- ===== WHATSAPP FLOATING BUTTON ===== -->
+    <a class="whatsapp-float" href="https://wa.me/5541987106153" target="_blank" rel="noopener noreferrer"
+        aria-label="Falar no WhatsApp">
+        <svg viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+        </svg>
+        <span class="whatsapp-float-text">WhatsApp</span>
+    </a>
+
+</body>
+
+</html>
